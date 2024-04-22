@@ -1,0 +1,4 @@
+src/*.ips
+!src/patches/*.ips
+*.nes
+*.bps
