@@ -1,0 +1,116 @@
+(Pause, change value to warp screen, unpause turn off before you enter a door)
+6B5E:?? (Move Syd to Room Number)
+6B5F:?? (Move Razor to Room Number)
+6B60:?? (Move Dave to Room Number)
+6B61:?? (Move Michael to Room Number)
+6B62:?? (Move Bernard to Room Number)
+6B63:?? (Move Wendy to Room Number)
+6B64:?? (Move Jeff to Room Number)
+6B65:?? (Move Radioactive Suit to Room Number)
+6B66:?? (Move Fred Edison to Room Number) (Move fred out of room if you want his stuff)
+6B67:?? (Move Nurse Edna to Room Number)
+6B68:?? (Move Weird Ed to Room Number)
+6B69:?? (Move Cousin Ted to Room Number)
+6B6A:?? (Move Purple Tentacle to Room Number)
+6B6B:?? (Move Green Tentacle to Room Number)
+6B6C:?? (Move Meteor police to Room Number)
+6B6D:?? (Move Meteor to Room Number)
+6B6E:?? (Move Mark Eteer to Room Number)
+6B6F:?? (Move Wink Smiley to Room Number)
+Credit: RetroCheats
+
+(List Of Room Numbers)
+00 = Crash
+01 = Yard
+02 = Bottom of Pool
+03 = Room with Couch & old key
+04 = Jail
+05 = Library
+06 = Swimming pool
+07 = Kitchen
+08 = FuseBox Room
+09 = Safe Room
+0A = Floor 1 Main Room
+0B = 2nd Floor Top Of Stairs
+0C = Tentacle Blocked
+0D = 2nd Floor Hallway
+0E = Weird Slime room
+0F = Wire Room
+10 = Garage Normal
+11 = TV Room
+12 = Arcade Room
+13 = Edna's Room
+14 = Green Tentacle room
+15 = Radio Room
+16 = Medical Room
+17 = Photo Develop Room
+18 = Bathroom 12
+19 = Weight Lift room
+1A = Weird ed's room
+1B = Plant Room
+1C = Telescope Room
+1D = Under House
+1E = Sandy Room
+1F = Purple tentacle room
+20 = 911 Cutscene
+21 = Meteor Crash Cutscene
+22 = Safe's Password
+23 = See Alien Cutscene
+24 = Shelf Room
+25 = Dining Room
+26 = Top Hallway
+27 = Arcade High Score
+28 = Inside Television
+29 = Television Network Room
+2A = Talk Show
+2B = Phone Numbers
+2C = Outside with Moon
+2D = Pick Kids
+2E = Car Fly Cutscene
+2F = Bad Ending Cutscene
+30 = Meteor in Car Ending Cutscene
+31 = Title Screen
+32 = Pause Menu 00
+33 = Meteor Room
+34 = Garage Destroyed
+35 = Beta Character Select
+36 = Telescope Cutscene outside
+37 = Grey
+38 = Crash
+Credit: RetroCheats
+
+Ram Cheat Codes for Maniac Mansion:
+6100:?? (Control these Characters, move character to current room to work properly)
+Syd = 01
+Razor = 02
+Dave = 03
+Michael = 04
+Bernard = 05
+Wendy = 06
+Jeff = 07
+Radioactive Suit = 08
+Fred Edison = 09
+Nurse Edna = 0A
+Weird Ed = 0B
+Cousin Ted = 0C
+Purple Tentacle = 0D
+Green Tentacle = 0E
+Meteor police = 0F
+Meteor = 10
+Mark Eteer = 11
+Wink Smiley = 12
+Credit: RetroCheats
+
+Game Genie Codes for Maniac Mansion:
+SEXGKASZ (All Codes/Passwords are 0000 by default)
+Credit: Ugetab
+
+Credit: RetroCheats
+616F:03 (1-2 Player Game) (Turn off once you start game)
+610C:0B (Lights always on) (I think it stops the beeping countdown.. unsure)
+6709:8F (Card Key Door is always open)
+664F:8F (Door that needs Gargoyle pushed/pulled is always open)
+66A9:CF & 66A5:C5 (Jail Door is opened for both sides)
+(Two little extra codes)
+61B8:08 - Dave is strong
+615C:00 - Ed always answers doorbell (Will never get annoyed and will continue even after he gets the package)

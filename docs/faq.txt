@@ -1,0 +1,1509 @@
+
+
+-------------------------------------------------------------
+START OF FAQ
+-------------------------------------------------------------
+
+MANIAC MANSION
+
+NES - FAQ Volume 3.0
+
+BY Christopher James Pepin
+
+cpepin1@grfn.org
+
+Original Version Copyright (c) 1996 by Christopher James Pepin
+Revised Version(s) Copyright (c) 1997 by Christopher James Pepin
+
+12/25/97
+
+        The most recent version of this FAQ should be available on
+my web page.  Visit The Forgotten Archives and download the newest
+version.  [http://www.grfn.org/~cpepin1/index.html]
+
+        This FAQ is also available by FTP, courtesy of GamePro
+magazine's Andy Eddy. Just FTP to ftp.netcom.com and cd
+/pub/vi/vidgames/faqs.  Don't forget to read the INDEX.README file.
+
+        Since I've always been a great fan of this game, I felt it
+needed a FAQ of it's own.  This is for the Nintendo Entertainment
+System (NES) version of the game. The computer versions are a bit
+different, but if all you need is a hint then this FAQ might be
+able to help.  I will try to include as much as possible about this
+game in this FAQ, but if you see something incorrect, misleading,
+or just plain missing then let me know.  Additions and/or suggestions
+are always welcome.  If you've found a neat trick for this game that
+I don't have listed, let me know.
+        There are numerous ways to solve different puzzles in this game.
+Each of the kids can do something that the other kids can't do.  Dave
+has no special abilities though.  Jeff's special ability is his knack
+at being able to fix phones.  Because Bernard can also fix phones, I
+recommend taking Bernard over Jeff.  Also, Jeff has absolutely no
+ability that will allow the gang to get past the Purple Tentacle.
+The only kid (other than Dave) who has this handicap.  Bernard, on the
+other hand, does have a way to get past the Purple Tentacle due to his
+ability to call the Meteor Police.  Syd and Razor are essentially the
+same person since they both have EXACTLY the same abilities.  They can
+both play the piano and nuke the hamster in the microwave.  Wendy can
+write quite well and can rewrite a horrible autobiography.  Michael is
+the only person who can develop film.  My personal recommendation
+is to take Bernard and Wendy.  But, no matter which group you take,
+have fun!
+
+
+WARNING!!  TRESPASSERS WILL BE HORRIBLY MUTILATED.
+
+and so it begins.....
+
+1.0     List of useful items in the game and what they do.
+2.0     Worthless items
+3.0     Map of House
+4.0     General Questions
+5.0     How to kill off kids
+6.0     Other stuff
+7.0     How to get thrown into the dungeon
+8.0     Different ways to get past the Purple Tentacle
+9.0     How to get the different endings for the game
+10.0    The Untold Story
+11.0    Interesting Tidbits
+12.0    Afterword
+13.0    Credits
+
+---------------------------------------------------------------------
+1.0     LIST OF USEFUL ITEMS
+---------------------------------------------------------------------
+
+DRIVEWAY AND FRONT PORCH:
+        sign               = Displays a helpful warning
+        address sign       = If you plan on sending anything through
+                           the mail, you need a return address.
+        mailbox            = A good place to put a letter or small
+                           package.  Don't forget the flag.
+        bushes             = Hides the grating.
+        grating            = A way to get under the house.
+                           It's rusted shut though.
+        door mat           = Hides the key to the front door.
+        doorbell           = The Mailman rings it whenever he
+                           delivers something.
+        front door         = Use the key under the door mat.
+        key                = Unlocks the front door.
+        package            = Weird Ed has been expecting this.
+        roll of film       = Ed's plans!  They need to be developed
+                           before you can give them to Ed.
+
+UNDER HOUSE:
+        puddle             = Use the sponge on it.
+        water valve        = Controls the water level in the pool.
+        floor grating      = The developing fluid leaked through
+                           this.
+
+FRONT HALL:
+        right gargoyle head= Try giving it a little push.
+
+LIVING ROOM:
+        old radio          = Open it up.
+        radio tube         = Use this to fix the short-wave radio.
+        cabinet door       = Open it up.
+        cassette player    = Play tapes on it.
+        glass chandelier   = Hides the old rusty key.
+        old rusty key      = Unlocks the door to the dungeon.
+
+LIBRARY:
+        lamp               = Illuminates the situation.
+        phone              = Try giving someone a ring
+        loose panel        = A blank cassette tape is hidden here.
+        cassette tape      = Try recording something on it.
+
+KITCHEN:
+        microwave oven     = Try boiling some water.
+        faucet             = Almost always a good source of water.
+        refrigerator       = That can of Pepsi looks good.
+        can of Pepsi       = That plant in the den looks thirsty.
+        flashlight         = The attic is awfully dark.
+
+DINING ROOM:
+        nothing useful
+
+PANTRY:
+        grate              = The developing fluid drips through it
+                           and ends up under the house.
+        bottle of developer= You need this fluid to develop Weird
+                           Ed's secret commando plans.
+        glass jar          = Good to hold water in.
+        fruit drinks       = Give this to Green Tentacle after you
+                           give him the waxed fruit and he'll let
+                           you pass.
+
+SWIMMING POOL:
+        radioactive water  = This might make something mutate.
+        ladder             = Use this to climb down into the pool
+        pool chair         = The radio is sitting on it
+        red button         = Press at your own risk!
+        glowing key        = Unlocks the padlocks on the outer
+                           door of the secret lab.
+        radio              = Isn't this thing powered by batteries?
+        gate               = This leads to the garage.
+
+GARAGE:
+        garage door        = Get some muscles.
+        cement slab        = This covers the one-way door leading
+                           from the Meteor's room out to the garage.
+        water faucet handle= Fixes the water faucet on the shower.
+        Weird Edsel        = We have LIFTOFF!
+        trunk of car       = The tools are in here.  This might also
+                           be a good place to put something.
+        tools              = Use these to fix things.
+        rocket engine      = Powers the Edsel.
+
+
+SECOND FLOOR LANDING:
+        wall lamp          = Lights the room.
+        steel security door= Just a door.
+
+PAINTING ROOM:
+        Waxed Fruit        = Give this to the Green tentacle so
+                           he'll let you pass.
+        paint remover      = Removes paint.
+
+MUSIC/T.V. ROOM:
+        piano              = Let Syd or Razor take a try at playing.
+        TV                 = Check out the commercial.
+        Victrola           = It plays records.
+        cassette recorder  = Allows you to record stuff on cassette
+                           tapes.
+        broken record      = See section 6.0 part C.
+
+SECOND FLOOR HALLWAY:
+        keypad             = Use it to blow up the house. (Only if
+                           you really, really want to, of course.)
+
+FRED'S OFFICE:
+        desk lamp          = Turn it on.
+        desk               = Look in the drawer.
+        drawer             = Contains the Meteor's manuscript.
+        manuscript         = This needs to be rewritten.
+
+ARCADE ROOM:
+        Meteor Mess Game   = Dr. Fred stores the combination to
+                           his lab as the high score.
+        other games        = Give them a try.
+        coin box           = This is where your quarter ends up
+                           when you play a game.
+
+DARKROOM:
+        red light          = It really brightens the place up.
+        developer tray     = Put the developing fluid in here.
+        enlarger           = Used to help develop the roll of film.
+
+THIRD FLOOR HALLWAY:
+        nothing useful
+
+EDNA'S ROOM:
+        telephone          = Call Edna and she'll pick up this phone.
+        small key          = Unlocks the coin boxes on the arcade
+                           games.
+        ladder             = Leads up to Attic 1.
+
+ATTIC 1:
+        painting           = Hides the wall safe.
+        wall safe          = Contains the envelope.
+        scrawled number    = You need to magnify this with something
+                           REALLY big.
+        light              = Light up your life.
+        envelope           = Use this to send stuff through the mail.
+                           You have to steam it open or else you'll
+                           never be able to close it again.  The
+                           quarter is also inside it.
+        quarter            = Arcade games and a vending machine pop
+                           into my mind.
+DR. FRED'S ROOM:
+        wanted poster      = Has the number for the Meteor Police
+                           written on it.
+        dime               = Now, if only you had some more.
+        radio              = Use this to call the Meteor Police.
+        tube socket        = Have Bernard place the radio tube here
+                           to fix the short-wave radio.
+        ladder             = Leads to Green Tentacle's room.
+
+GREEN TENTACLE'S ROOM:
+        left speaker       = Just part of the stereo.
+        right speaker      = Just part of the stereo.
+        mondo stereo       = You can play cassette tapes on it.
+        record             = You might want to make a recording of
+                           this on a cassette tape.
+        yellow key         = Unlocks the trunk of the Edsel and/or
+                           to start it up.
+WEIRD ED'S ROOM:
+        hamster            = The card key is hiding behind it.
+        piggy bank         = Contains several dimes.
+        dimes              = Use these on the telescope.
+        card key           = Unlocks the door to the Meteor's room.
+
+DEAD COUSIN TED'S ROOM:
+        Hunk-O-Matic machine = Use this twice to build big muscles.
+
+BATHROOM:
+        pull chain         = Flushes toilet.
+        sponge             = Use this to soak up the developer
+                           fluid under the house.
+        sink               = You can also use this to fill the
+                           glass jar.
+        water faucet       = Ted will get a real kick if you turn
+                           it on.
+
+DEN:
+        typewriter         = Use this to type stuff.
+        paint blotch       = Hides the door to attic 2.
+        pot for plant      = You need to use this plant to get
+                           into the observatory.
+        hatch              = The entrance to the observatory.
+
+ATTIC 2:
+        light              = Enlighten yourself.
+        wires              = You need to fix the bare spot.
+
+OBSERVATORY:
+        powerful telescope = Use this to read the scrawled number
+                           on the wall next to the safe in attic 1.
+        control panel      = Controls the big telescope.
+        coin slot          = Put dimes in here.
+        right button       = Use this to move the telescope one
+                           turn to the right.
+        left button        = Use this to move the telescope one
+                           turn to the left.
+
+BASEMENT:
+        light switch       = Brighten your outlook.
+        fuse box           = Contains the circuit breakers.
+        circuit breakers   = Cuts off the power.
+        silver key         = Unlocks the door in the pantry.
+
+DUNGEON:
+        loose brick        = Opens the door to the basement.
+        bottom padlock     = Use the glowing key on it.
+        top padlock        = Use the glowing key on it.
+        outer door         = Don't just stand there! Get it open!
+        inner door         = Leads to the outer lab.
+        badge              = Use this to get past Purple Tentacle.
+
+OUTER LAB:
+        nothing useful
+
+INNER LAB:
+        Pepsi machine      = Anyone for a Pepsi?
+        Pepsi              = AHHHHHH! Refreshing.
+        ZOM-B-MATIC        = QUICK, find a way to turn it off.
+        locker             = Contains radiation suit.
+        radiation suit     = Put this on before entering the
+                           Meteor's room.
+        card slot          = Use the card key with this.
+
+METEOR'S ROOM:
+        switch             = Use this to turn off the ZOM-B-MATIC.
+        Meteor             = You'll have to find a way to dispose
+                                   of him QUICKLY.
+
+--------------------------------------------------------------------
+2.0     WORTHLESS ITEMS
+--------------------------------------------------------------------
+
+FRONT PORCH:
+        bushes on right side of porch
+
+FRONT HALL:
+        Grandfather Clock
+        vases
+        left gargoyle head
+
+LIVING ROOM:
+        windows
+        couch
+
+LIBRARY:
+        chair
+        Chuck The Plant
+        "Out of Order" staircase
+
+KITCHEN:
+        old batteries
+        cheese
+        lettuce
+        broken bottles of ketchup
+        chainsaw
+        blood
+        very dull knives
+        stove
+        window
+
+DINING ROOM:
+        week old roast
+        gravy stain
+        old rotting turkey
+        candle
+        chair
+
+PANTRY:
+        Tentacle Chow
+        canned goods
+
+SWIMMING POOL:
+        drain
+        exposed cooling rods
+        radioactive slime
+        old tree
+
+GARAGE:
+        bumper sticker
+        license plate
+        sign
+
+SECOND FLOOR LANDING:
+        painting of Fred
+        painting of Edna
+
+PAINTING ROOM:
+        paint brush
+        easel
+        crate
+        dried purple slime
+
+MUSIC/T.V. ROOM:
+        vase
+        piano bench
+
+FRED'S OFFICE:
+        black board
+        DOCS 'R US diploma
+        MAIL-A-MED diploma
+        medical chart
+        examination table
+        real skeleton
+
+THIRD FLOOR LANDING:
+        windows
+        lovely plant
+
+DARKROOM:
+        desk
+
+THIRD FLOOR HALLWAY:
+        plants
+
+EDNA's ROOM:
+        desk
+        cracked mirror
+        perfume
+        pillow
+        picture of Dr. Fred
+        bed
+        mirror
+        night stand
+        plant
+        light
+
+DR. FRED'S ROOM:
+        bed
+        picture of Nurse Edna
+
+GREEN TENTACLE'S ROOM:
+        poster
+        picture
+        bed
+
+WEIRD ED'S ROOM:
+        strategic commando chart
+        fighter jet model
+        x-wing model
+        window
+        bed
+        pennant
+
+DEAD COUSIN TED'S ROOM:
+        sarcophagus
+        pillow
+        TV
+
+BATHROOM:
+        toilet lid
+        toilet
+        window
+        shower curtain
+        cracked mirror
+
+DEN:
+        plant by door to hallway
+        fireplace
+        family portrait
+        desk
+
+ATTIC 2:
+        boarded up window
+
+OBSERVATORY:
+        astronomy chart
+
+BASEMENT:
+        nuclear reactor
+        furnace
+        radioactive slime
+
+DUNGEON:
+        barred window
+        candle holder
+
+OUTER LAB:
+        map of house
+        control panel
+        periscope
+
+INNER LAB:
+        control panel
+        buttons 1, 2, 3, & 4
+
+METEOR'S ROOM:
+        purple slime
+
+-------------------------------------------------------------------
+3.0     MAP OF HOUSE
+-------------------------------------------------------------------
+
+I know this isn't the greatest map in the world, but what do you
+expect for free? :-)
+
+A = Driveway
+B = Front Porch
+C = Under House
+D = Front Hall
+E = Living Room
+F = Library
+G = Kitchen
+H = Dining Room
+@ = Pantry
+J = Swimming Pool
+K = In Swimming Pool
+L = Garage
+M = Second Floor Landing
+N = Painting Room
+O = Music\T.V. Room
+P = Second Floor Hallway
+Q = Fred's Office
+R = Arcade Room
+S = Third Floor Landing
+T = Darkroom
+U = Third Floor Hallway
+V = Dr. Fred's Room
+W = Green Tentacle's Room
+X = Nurse Edna's Room
+Y = Attic 1
+Z = Weird Ed's Room
+AA = Dead Cousin Ted's Room
+BB = Bathroom
+CC = Den
+DD = Observatory
+EE = Attic 2
+FF = Basement
+GG = Dungeon
+HH = Outer Lab
+@@ = Inner Lab
+JJ = Meteor's Room
+
+                                W       Y               BB
+                                |       |               |
+                                V       X       Z       AA      DD
+                                |       |       |       |       |
+                                U-------U-------U-------U-------CC-----EE
+                                                        |
+                                        Q       R       S-----T
+                                        |       |       |
+                                        P-------P-------P
+                                        |
+        @-------H-------G       N-------M-----O
+        |               |               |
+        J               D-------D-------D-------E-------F
+        |               |               |
+K-------J       C-------B-------A       FF
+        |                               |
+        L-------JJ------@@------HH------GG
+
+
+---------------------------------------------------------------------
+4.0     GENERAL QUESTIONS
+---------------------------------------------------------------------
+
+        A.  HOW DO I OPEN THE GRATING IN THE FRONT YARD?
+
+            It seems that Dr. Fred doesn't go under the house very
+much and the grating has rusted shut.  There are two different ways
+to get it open.  The first requires one of the kids to go upstairs
+to Ted's room and use his Hunk-O-Matic machine twice.  Only then
+will he (or she) be strong enough to rip open the grating like the
+Incredible Hulk would.  The second way is very simple.  Use the
+tools on the grate and you'll have it open in no time.
+
+        B.  CAN I STICK THE HAMSTER IN THE MICROWAVE AND BLOW HIM UP?
+
+            Yes.  Only Syd or Razor are able to Nuke the Hamster.
+The only exception to this is the PAL version of the game was
+modified to prevent the hamster from being nuked.  All known U.S.
+versions of the game allow you to blow up the hamster so don't
+let anyone tell you otherwise. [NOTE: DO NOT, I REPEAT, DO NOT STICK
+ANYTHING LIVING INTO A REAL MICROWAVE!  A MICROWAVE IS NOT A TOY!]
+
+        C.  WHAT IS SITTING BEHIND MARK ETEER WHEN YOU WATCH T.V.?
+
+            Just for a moment when the commercial starts and
+finishes, Mark Eteer won't be on the screen and you will get a
+brief glimpse of something on the wall behind him.  This is just
+a record of Elvis (or an impersonator).
+
+        D.  DOES THE STAIRCASE THAT'S OUT OF ORDER LEAD ANYWHERE
+        AND CAN IT BE FIXED?
+
+            No it does not lead anywhere and it can't be fixed.
+
+        E.  HOW DO I FIND THE SECRET COMBINATION TO THE LABORATORY?
+
+            First, you need to get the tools.  Then go up to
+attic 2.  Have one of your kids turn off the power and have the
+kid in the attic use the tools to fix the broken wiring.  Wait
+a bit and Dr. Fred will play the Meteor Mess game in the game
+room.  If you have a quarter, you can play the game and the high
+score is the combination to the lab.  If you don't have a quarter,
+see "HOW DO I OPEN THE SAFE?"  Another way is to not fix the wiring
+in the attic and the combination will be 0000.  If you did fix
+the wiring and don't feel like bothering to play Meteor Mess,
+try one of these combinations 7572, 5858, 3301, or 8640.
+
+        F.  HOW DO I OPEN THE SAFE?
+
+            You need the combination. :-)  Seriously, to get the
+combination you need to use the telescope in the observatory to
+magnify the minuscule writing on the wall next to the safe.  To
+operate the telescope, you'll need some dimes.  One dime you can
+pick up off the floor in Dr. Fred's room.  But, that's not enough
+so you'll just have to break open Weird Ed's piggy bank.  Once
+you've got the loot, put two dimes into the slot on the wall of
+the observatory and rotate the telescope twice to the right.  Then
+use the telescope and you will see the combination.  Once again,
+if you're lazy try one of these combinations 3621,1230, 4186, 1029,
+or  0120.
+
+        G.  WHERE IS THE GAS FOR THE CHAINSAW?
+
+            There isn't any gas for the chainsaw in Maniac Mansion.
+You can find a container of gas in ZAK MCKRACKEN AND THE ALIEN
+MINDBENDERS.  This is another LucasArts game only available on
+computers.  It can be found in the alien Hostel on Mars.
+
+        H.  WHERE CAN I FIND NURSE EDNA'S PHONE NUMBER?
+
+            Her phone number is written on the wall of the
+bathroom, but Ted is in the way.  Perhaps a cold shower will wake
+him up.
+
+        I.  WHAT IS NURSE EDNA'S PHONE NUMBER?
+
+            See question H or try 1547, 3444, 5235, 2275, or 7537.
+
+        J.  WHAT ARE THE TOMBSTONES IN THE FRONT YARD FOR?
+
+            Each time you kill a kid (without blowing up the house)
+the Edisons bury them in the yard and a tombstone appears.  Just
+don't let three tombstones appear there or else the game will end.
+
+        K.  ISN'T THERE A WAY TO MAKE KIDS INVISIBLE?
+
+            Yes there is.  Nuke the hamster in the microwave and
+then have one of them give it back to Weird Ed.  (Make sure you
+give all of his or her items to another kid before you do this.)
+Weird Ed will be so mad that he will kill him (or her) and bury them
+in the front yard.  The kid may be dead but they can still be used.
+
+        L.  WHERE ARE THE PLANS WEIRD ED WANTS ME TO FIND?
+
+            After you give Weird Ed his package (don't forget to
+take the stamps off first), the plans will appear next to the
+bushes in front of the house.  Have Michael develop the film
+in the darkroom and then you can give the plans to Ed.
+
+        M. HOW DO I TURN ON THE SHOWER?
+
+           You need to fix the handle.  You can find one sitting
+in the garage on the shelf.
+
+        N.  HOW CAN I GET THINGS OUT OF WEIRD ED'S ROOM WITHOUT BEING
+        THROWN INTO THE DUNGEON?
+
+            You need to find a way to lure Ed out of his room.
+One way is to have one kid hide in Ted's room and have another
+kid ring the doorbell.  Ed will wander downstairs thinking his
+package has arrived and you can then race over to Ed's room and
+grab what you need.  Of course, once you give Ed his package this
+won't work.  Another way is to have one kid walk into Ed's room
+and while Ed is hauling him off to the dungeon another kid can
+sneak in and get stuff.
+
+        O.  WHAT DO I DO WITH THE TELESCOPE?
+
+            See question F "HOW DO I OPEN THE SAFE?".
+
+        P.  HOW DO I TURN OFF THE POWER?
+
+            Use the circuit breakers down in the basement.  Be
+careful, if you leave the power off to long, the nuclear reactor
+will overheat and blow up.
+
+        Q.  HOW DO I OPEN THE DOOR TO THE RIGHT OF THE STAIRS IN
+        THE FRONT HALL?
+
+            You need to have one of the kids push the gargoyle
+head on the right side and the door will open up.  While one kid
+stands there and holds the gargoyle head, a different one can pop
+through the door and check out the basement.
+
+        R.  HOW DO I DEVELOP THE PLANS?
+
+            Have Michael take the film and the developing fluid
+up to the darkroom.  Put the developing fluid in the tray.  Then use
+the film on the tray.
+
+        S.  HOW DO I GET UP TO THE OBSERVATORY?
+
+            You need to climb up the plant in the den.  But,
+first you need to get it to grow real tall.  Water the plant with
+some radioactive pool water and then give it some Pepsi.
+
+        T.  HOW DO I GET TO ATTIC 2?
+
+            See that blotch of paint on the wall in the den.  Use
+the paint remover on it to reveal a door.
+
+        U.  HOW DO I GET THE GREEN TENTACLE TO LET ME PASS?
+
+            First feed him the waxed fruit.  Then give him the
+fruit drinks to wash it down.  Bernard is too afraid of the Green
+Tentacle at first so you'll need to use a different kid to feed him.
+Instead of giving him the waxed fruit, you could give him every other
+piece of food you can find to fill him up.
+
+        V.  HOW DO I FIX THE PHONE?
+
+            Have Jeff or Bernard fix the phone using the tools.
+
+        W.  HOW DO I FIX THE SHORT-WAVE RADIO?
+
+            Have Bernard take the radio tube out of the radio
+in the living room and put it into the tube socket next to the
+short-wave radio.
+
+        X.  HOW DO I CALL THE METEOR POLICE?
+
+            After the short-wave radio is fixed, have Bernard look
+at the poster in Dr. Fred's room and you'll find the number for the
+Meteor Police.  Use the short-wave radio and dial their number.  The
+number could be 9111, 1977, 3412, 0525, or 1138.
+
+        Y.  HOW DO I DRAIN THE POOL?
+
+            Have one of your kids stand next to the pool.  Then have
+one of the other kids go under the house and open the water valve.
+This will drain the water out of the pool.  Don't forget to close the
+valve after you are finished because if the reactor overheats the
+house will blow up.
+
+        Z.  HOW DO I OPEN THE GARAGE DOOR?
+
+            Have one of the kids go upstairs to Ted's room and use
+the weight lifting machine twice.  Then you will be strong enough to
+rip open that heavy garage door.
+
+        AA.  WHAT DO I DO WITH THE FLASHLIGHT?
+
+             The flashlight doesn't have any batteries.  The
+old batteries sitting in the refrigerator are very weak and
+go out very quickly.  You can get some fresh batteries out of the
+radio sitting in the pool chair.  You use the flashlight to
+see what you're doing while fixing the wiring in the attic.
+
+        BB.  HOW DO I FIX THE BROKEN WIRING?
+
+             First, have one kid switch off the circuit breakers in
+the basement.  Then have another kid in attic 2 use the flashlight
+(with the strong batteries in it) so he can see.  Then use the tools
+on the exposed wires.
+
+        CC.  HOW DO I GET THE KEY HANGING IN THE CHANDELIER IN THE
+        LIVING ROOM?
+
+             You need to get the record from the Green Tentacle's
+room and play it on the record player in the music room.  Put a
+cassette tape in the cassette player and hit record.  Then take the
+tape downstairs to the living room and play it on the cassette player
+in the cabinet.  The high pitched noise will shatter the chandelier
+allowing you to retrieve the key.
+
+        DD.  HOW DO I PLAY THE VIDEO GAMES?
+
+             The wiring that connects to this room is broken (see
+question BB).  Once the wiring is fixed, you will need a quarter.
+The quarter can be found in the envelope.  (See the next question
+about how to get the quarter out of the envelope.) If you have
+the key from Nurse Edna's room, you can open the coinbox to retrieve
+the quarter after you've played a game.  Then you can use it to play
+another game.
+
+        EE.  HOW DO I OPEN THE ENVELOPE?
+
+             The envelope needs to be steamed open if you want to use
+it to send something in the mail.  Take the envelope and place it
+in the microwave.  Then fill the glass jar with tap water (NOT POOL
+WATER!) and place it into the microwave.  Turn it on and the envelope
+will steam open.
+
+        FF.  HOW DO I SEND SOMETHING IN THE MAIL?
+
+             First, steam open the envelope. (See preceding question.)
+Then watch some television.  Go upstairs and address the envelope with
+the typewriter.  Then pull the package and some stamps will come off.
+Place the item you want sent inside the envelope and stick on the
+stamps.  Place the envelope in the mailbox, close the door, and raise
+the flag.  Don't stand next to the mailbox or the mailman won't come.
+
+        GG.  WHAT DO I DO WITH THE MANUSCRIPT?
+
+             Have Wendy take it upstairs to the typewriter and
+give it a good re-write.  Then send it in to Mark Eteer.  A
+contract for the Meteor will arrive in the mail.
+
+        HH.  HOW DO I GET OUT OF THE DUNGEON?
+
+             If there are two kids stuck in the dungeon, have one kid
+stand next to the door on the right.  Switch to the other kid and
+have him push the loose brick.  Quickly switch back to the other kid
+and run out the door before it slams shut.  The key that unlocks this
+door is hanging in the chandelier in the living room. (See question CC.)
+
+        II.  HOW DO I GET THE GREEN TENTACLE TO HELP ME?
+
+             The Green Tentacle wants to be a star.  Have Syd or
+Razor make a recording of them playing the piano.  Bring the cassette
+upstairs and play the tape on the Tentacle's Mondo Stereo.  He'll be
+so impressed he will give you his own demo tape.  Send it to Mark
+Eteer and he'll send a recording contract for the Green Tentacle.
+Give the contract to Green Tentacle and he'll help you out by chasing
+Purple Tentacle out of the Outer Lab.
+
+        JJ.  HOW DO I GET WEIRD ED TO HELP ME?
+
+             You need to find his package for him.  The mailman
+will leave it sitting next to the mailbox and then ring the doorbell
+to let you know it arrived.  Have one of the kids run out and snag it
+before Ed comes down to get it.  Pull the package and some stamps
+will come off.  Then give the package to Ed.  He will ask you to
+find his plans.  His plans will now be sitting next to the bushes
+in front of the house.  The roll of film needs to be developed.
+(See question R.) After it is developed, give the plans to Ed and
+he will scare off Purple Tentacle when you enter the outer lab.
+
+
+        KK.  I NEED A KEY.  WHERE ARE THEY?
+
+             The key to the front door is hidden under the doormat.
+The key to the dungeon is hanging in the chandelier in the living
+room.  (See question CC.)  The key to the pantry door is hanging
+in the basement.  The card key for the Meteor's room is hiding behind
+the hamster.  The key to the Edsel is up in Green Tentacle's room.
+The key to the coinboxes on the arcade games is in Nurse Edna's room.
+The key to the padlocks on the lab door is at the bottom of the
+swimming pool.
+
+        LL.  WHERE DO I FIND THE METEOR POLICE BADGE?
+
+             After you call the Meteor Police and they haul away the
+evil Meteor, they will leave behind a badge in the dungeon.  Just
+pick it up and it's yours.
+
+        MM.  HOW DO I GET PAST NURSE EDNA?
+
+             You could have her capture one of the kids and while she
+is hauling him down to the dungeon, you can slip in and get to the
+attic before she gets back.  If you call her on the phone, she will
+be so distracted she won't notice if someone sneaks into her room.
+(See questions H and I.)  You'll have to have Jeff or Bernard fix
+the phone in the library with the tools before you can use it.
+
+        NN.  I'VE MADE IT TO THE INNER LAB.  WHAT DO I DO?
+
+             It depends.  You have to open the door to the Meteor's
+room by placing the card key in the card slot.  Then put on the
+radiation suit and enter the Meteor's room.  Pull the switch.  See
+section 9.0.
+
+--------------------------------------------------------------------
+5.0     HOW TO KILL OFF KIDS
+--------------------------------------------------------------------
+
+            Try one of these ten different ways to bump them off.
+Also, when you kill one of them, anything they were carrying
+when they died is lost forever.
+
+        A.  Have kid 1 drain the pool, then have kid 2 (and kid 3
+if you want) climb down into it and have kid 1 turn the water back
+on.
+
+        B.  Walk into the meteor's room without a radiation suit
+on (while the Meteor is there, of course.)
+
+        C.  Nuke Ed's hamster in the microwave and then give it
+back to him.
+
+        D.  Fill the glass jar with water from the pool and then
+stick it into the microwave.  Turn on the microwave and when it's
+done, open the door.  ARRGGHHHH!  Radioactive Steam!
+
+        E.  Use the keypad next to the security door and the
+house will go sky-high.
+
+        F.  Drain the pool and don't refill it.  The house will
+go sky-high.
+
+        G.  Turn off the power and don't turn it back on again.
+The house will go sky-high.
+
+        H.  Push the red button in the pool.  The house will go
+sky-high.
+
+        I.  When you enter the secret lab, let Dr. Fred's
+self-destruct mechanism reach zero.  The house will go sky-high.
+
+        J.  Have Syd or Razor make a demo tape by playing the
+piano.  Then send the tape to Mark Eteer.  He'll send back a
+contract.  If you show this contract to the green tentacle
+he'll be so jealous that he will kill you.
+
+
+--------------------------------------------------------------------
+6.0     OTHER STUFF
+--------------------------------------------------------------------
+
+        A.  Don't call the Meteor Police too many times or else
+they will get mad and refuse to come anymore.  So, make sure you
+have both lab doors unlocked and open when they arrive.
+
+        B.  What Nurse Edna says when she hauls someone to the
+dungeon and locks them up.
+
+                OH!  An unwelcome visitor!  I got you!
+
+                a.  You'll be safe here until the police come, dearie.
+
+                b.  I have half a good mind to talk to my husband!
+
+                c.  Just you wait until I talk to your mother!
+
+        C.  Here are some things you can send to Mark Eteer. Something
+different will happen depending on what you send.
+
+                a.  A blank tape.
+
+                b.  A tape with the tentacle record recorded on it.
+
+                c.  A tape with the broken record recorded on it.
+
+                d.  The Meteor's manuscript before it is rewritten.
+
+                e.  The Meteor's manuscript after it is rewritten.
+
+                f.  The Green Tentacle's tape.
+
+                g.  A recording of Syd or Razor playing the piano.
+
+        D.  Weird Ed gets hungry and wanders down to the kitchen
+for a snack early in the game.  If you swipe the cheese out of
+the fridge, poor Ed and his hamster will have to go hungry.
+
+        E.  In the beginning of the game, Nurse Edna is hanging
+around in the kitchen.  If you go in there and she sees you,
+she'll chase and grab you.  But if you make it out of the
+kitchen, she won't follow you.  It is very tricky to make it
+out of the kitchen before she catches you but it can be done.
+Give it a try.
+
+        F.  You can develop the roll of film without the red
+light on.  It's kind of funny because all you see is Michael's
+head floating in the air like a ghost.
+
+        G.  Here's a little trick to get past Nurse Edna with only
+one kid.  Go into her room and IMMEDIATELY switch to another kid.
+After about 20 seconds, switch back to Edna's room and she
+will be frozen.  Then you can wander around her room without
+getting caught.  If you do this to Nurse Edna while she is
+in the kitchen, she will vanish.
+
+        H.  If you enter Nurse Edna's room and she starts towards
+you and you quickly duck out the door to avoid her, then look out.
+She will come right out into the hallway after you.
+
+        I.  There is a bug in the game where you can grab items out
+of the microwave when it is still on.  This bug will allow you to
+grab the hamster out of the microwave and then after the microwave
+is done, some hamster bits will strangely appear in the microwave.
+Thus you can have the hamster and the exploded hamster at the
+same time.
+
+        J.  In order to become Ed's friend you have to give him his
+package.  But if you had swiped his hamster earlier while he was
+out of his room, you can give it to him and he will be nice to you
+and not throw you in the dungeon.
+
+        K.  Try giving different tapes to the Green Tentacle and see
+what happens.
+
+                a.  A blank tape.
+
+                b.  A tape with the tentacle record recorded on it.
+
+                c.  A tape with the broken record recorded on it
+
+                d.  A recording of Syd or Razor playing the piano.
+
+                e.  The Green Tentacle's tape.
+
+---------------------------------------------------------------------
+7.0     HOW TO GET THROWN INTO THE DUNGEON
+---------------------------------------------------------------------
+
+        A.  In the beginning of the game, Nurse Edna is hanging
+around the kitchen for a little while.  Just wander in there and
+let her nab you.
+
+        B.  After Nurse Edna is done in the kitchen, Weird Ed
+gets hungry and decides to get himself and his hamster something
+to eat.  Let him catch you and into the dungeon you go.
+
+        C.  Go outside, push the doorbell and then go back into
+the house.  When Ed comes downstairs looking for his package and
+finds you instead, you'll get a one-way ticket to you-know-where.
+
+        D.  Flip the circuit breakers in the basement and the
+Purple Tentacle will come to investigate.
+
+        E.  Wander into Weird Ed's room when you are not his friend.
+
+        F.  If you are his friend, then touch his piggy bank.
+
+        G.  If you are his friend, try grabbing his hamster.
+
+        H.  Wander into Edna's room when she is there.
+
+        I.  Have one kid stand in the basement and have another
+kid open the valve under the house.  The purple tentacle will
+investigate the circuit breakers and arrest whoever is there.
+Don't forget to close the water valve after the one kid is
+thrown into the dungeon.
+
+        J.  Go into the outer lab and let the Purple Tentacle
+haul you back into the dungeon.
+
+-------------------------------------------------------------------
+8.0     DIFFERENT WAYS TO GET PAST THE PURPLE TENTACLE
+-------------------------------------------------------------------
+
+        A.  If you had given Weird Ed his secret plans, he will
+chase off the Purple Tentacle so you can get into the lab.
+
+        B.  Show the Meteor's manuscript contract to the Purple
+Tentacle and he'll let you in.
+
+        C.  After the Meteor Police arrive, they will drop a badge
+in the dungeon.  Just show it to the Purple Tentacle and he
+will let you pass.
+
+        D.  If you had given the recording contract to the Green
+Tentacle, he will chase off the Purple Tentacle for you.
+
+        E.  Have a kid pull the circuit breakers in the basement
+and then when the Purple Tentacle comes to investigate show him
+the Meteor's manuscript contract.
+
+        F.  Have a kid pull the circuit breakers in the basement
+and then when the Purple Tentacle comes to investigate, show
+him the Meteor Police Badge.
+
+        G.  Have one kid wait in the basement while another kid
+opens the valve under the house.  When the Purple Tentacle comes
+to investigate, have the kid in the basement show him the manuscript contract.
+
+        H.  Have one kid wait in the basement while another kid
+opens the valve under the house.  When the Purple Tentacle comes
+to investigate, have the kid in the basement show him the badge.
+
+-------------------------------------------------------------------
+9.0     HOW TO GET THE DIFFERENT ENDINGS FOR THE GAME
+-------------------------------------------------------------------
+
+        #1.  Turn off the switch in the Meteor's Room, grab the
+Meteor, go out the door to the right and you'll be in the garage.
+Open up the trunk with the yellow key and throw the Meteor inside.
+Close the trunk and start up the car.
+
+        #2.  Kill off Dave first, then do the same thing as ending #1.
+
+        #3.  Have the Meteor Police grab the Meteor and then go in
+and flip the switch.
+
+        #4.  Have Wendy retype the Meteor's manuscript and send it
+to Mark Eteer.  After you flip the switch, give the Meteor the
+contract that arrived in the mail.
+
+        #5.  Do the same as #4 except call the Meteor Police right
+before you go into the lab.
+
+        #6.  Kill off Wendy THEN give the contract to the Meteor.
+
+        #7.  Okay, this one's a bit tricky.  Remove whatever you
+need from the garage and then have one of the kids start up the
+Edsel.  Then when you go down to the lab, flip the switch, grab
+the Meteor, and go out the door.  Since the garage has been blown
+up the gate is now open.  Race into the house and up the stairs
+to the den.  Then feed the Meteor to the plant.  Remember to
+hurry because the self-destruct mechanism is ticking down.
+
+        #8.  Kill off all three kids (without blowing up the mansion).
+
+        #9.  Blow up the Mansion.
+-------------------------------------------------------------------
+10.0  THE UNTOLD STORY
+-------------------------------------------------------------------
+
+[NOTE: The following is an article written by Douglas Crockford.
+He worked on the NES version of Maniac Mansion while at LucasArts
+and has graciously allowed me to reprint the article in my FAQ.]
+
+
+Now You're Really Playing with Power:
+
+    The Expurgation of Maniac Mansion for the Nintendo Entertainment
+System
+
+The Untold Story
+
+   Douglas Crockford
+
+   I was the on-the-edge new-media/technology guy at the LucasArts
+   Entertainment Company, a spin-off of George Lucas's Lucasfilm Ltd.
+   in Marin County, California. Most of my work was (if I may say so
+   myself) "out there", but sometimes I would take on more mundane
+   projects to help out.
+
+   One such project was the Nintendo version of Maniac Mansion. This
+   was going to be LucasArt's first Nintendo cartridge. It was an
+   important project, but the management at Games was overloaded
+   and the project was slipping between the cracks. I volunteered
+   to manage its completion.
+
+   The original version of Maniac Mansion was designed by Ron Gilbert
+   and Gary Winnick. It is a graphic story game, in which you
+   manipulate three teenagers in order to save Sandy the Cheerleader
+   from Dr. Fred, whose mind is being controlled by an evil purple
+   meteor from Outer Space. I didn't contribute much to the original
+   version beyond the package slogan: His ambition was to rule the
+   world...one teenager at a time!
+
+   It is usually necessary to make a game run on several different
+   systems in order to have access to a large enough audience to make
+   it profitable. The process of moving a game to another system is
+   called conversion. It is sort of like shooting a movie twice to
+   get a Beta version and a VHS version.
+
+   In the course of converting to Nintendo, we had to redesign all of
+   the art in order to conform to Nintendo's screen geometry. We also
+   made some changes to adapt the game to a younger audience.
+
+   The bad words we removed, meaning that "The meteor is going to be
+   pissed" was changed to "The meteor is going to be mad." Howie Rubin
+   of Jaleco (the company that was going to publish the game under
+   license) advised us the that the baddest bad word is Kill. The
+   central activity in most Nintendo games is killing things. The
+   image and the act are good, but the word is bad, even if the word
+   does not suggest the image or the act.
+
+   The mansion contains a number of arcade video games. One was called
+   KILL THRILL. The name had to be changed. Doug Glen, our Director of
+   Marketing, suggested that we change it to MUFF DIVER, which I thought
+   was a pretty good idea. Unfortunately, I later became aware of the
+   NES Game Standards Policy, which stated in part:
+
+   Nintendo will not approve NES cartridges...with sexually suggestive
+   or explicit content.
+
+   Yikes, MUFF DIVER had to be changed again. In order to minimize the
+   impact on the artwork, I needed to substitute MUFF with another four
+   letter word that was less suggestive that could make sense with
+   DIVER.  We settled on the word TUNA.
+
+   The standards go on to prohibit depictions of excessive and
+   gratuitous violence, which would seem to ban any game in which
+   your character met people, killed them, took their money, and then
+   bought more weapons. But in fact most Nintendo games are still
+   faithful to that theme, so we were unclear as to how to interpret
+   Nintendo's policy. In the Super Mario Bros games, which are
+   considered clean and wholesome, kids routinely kill creatures, and
+   the only motivation is that they are there.
+
+   Clearly, interpreting the standard requires skills beyond mine. There
+   was stuff still in the mansion that I thought was suspect, but I
+   couldn't tell if it was out of bounds. I put it all in a Things in
+   Maniac Mansion list. I gave the list to our friends at Jaleco, and
+   they told me not to worry about it.
+
+   The way cartridges got made at that time was you submitted a finished
+   game to Nintendo with a letter of credit. If they accepted the game,
+   they would tell you how many units they would manufacture for you,
+   when, and at what price. We submitted Maniac, hopeful that our labors
+   were completed.
+
+   A month later we got a report from Nintendo of America's censors:
+
+   NOA has discovered the following problems with this program version:
+
+   1) There are several places in the screen text that could be felt to
+   be offensive to NES players. Please ammend [sic] the following:
+
+        "For a good time EDNA 3444"
+
+   This message is written on the wall in the shower in Dead Cousin Ted's
+   bathroom. Obviously, you can't have a good time in a Nintendo
+   cartridge. We couldn't erase the message completely because phoning
+   Nurse Edna is an important event in the game. We changed it to simply
+   "Call Edna 3444".
+
+         "getting your brains [sic] sucked out."
+
+   This is from Dr. Fred's first scene with Sandy. Dr. Fred actually says
+   "getting your pretty brains sucked out." They didn't state what their
+   objection was. Were they afraid that NES players would be offended by
+   threats against an innocent woman, or by the mention of a vital body
+   part (brain, in this case) or by the horror of brain damage? No, it
+   turned out that the problem was that the language was too graphic. I
+   was told that changing sucked out to removed made it ok. In the same
+   spirit, we voluntarily removed the Disco Sucks poster from the Green
+   Tentacle's bedroom. We also modified a medical poster in Dr. Fred's
+   office. The caption on a detail of the head had read "Chewy Caramel
+   Center." It now reads "Pretty Brains."
+
+   "Well, Mommy, I'm worried about him. Well, Mommy, I'm worried! He
+   hasn't eaten in 5 years. YEAH, SO!!! and he's been bringing those
+   bodies, and he carries those bodies to the basement at night." [sic]
+
+   This was from Weird Ed's dialogue with his mother, Nurse Edna, in
+   which Ed tries to get his mother to recognize the terrible things that
+   have happened to his father over the past 20 years. What was
+   Nintendo's problem with the dialogue? Was it the brutal exposition of
+   parental neglect in the disintegration of an American family? More
+   likely, we thought they had a problem with the dead bodies in the
+   basement, which was essential to establishing the Frankenstein movie
+   parody flavor of the program.
+
+   In fact, Nintendo's interpretation of the speech was that Dr. Fred was
+   a cannibal, that he was eating the bodies. That was never our
+   intention, so we changed Ed's speech to "He hasn't slept in 5 years,"
+   which helps to explain why Dr. Fred is never seen in his bedroom.
+
+   But even if we had intended that Dr. Fred was a cannibal, what's the
+   harm? He would have been one under the influence of the evil purple
+   meteor. The game recognizes that it is bad, and your mission is to
+   rescue him from this unhappy state. Who would be offended?
+
+   We expected to get nailed on Nurse Edna's character. Most of her
+   speeches were sexually suggestive. When she locks kids in her dungeon,
+   she will now say one of the following:
+
+   "You'll be safe here until the police come."
+
+   "Just wait until I talk to your mother."
+
+   "I have half a good mind to talk to my husband."
+
+   I wanted her to comment on the Nintendo scene, by saying
+
+   "You deserve to die, but I believe it is wrong to take any life."
+
+   but that might be viewed as a religious belief, and so be held to be
+   an anathema to racial, religious or ethnic groups. It is ok to seek
+   out creatures and destroy them with fireballs, but it is not
+   necessarily permissible to say that it is wrong.
+
+   Nurse Edna's obscene phone call definitely had to go. I considered
+   replacing it with "No, I don't have Prince Albert in a can, why do you
+   ask?" but that still gives kids an example of abusive and illegal
+   telephone behavior.
+
+   So instead, we have Edna confuse the caller with Dead Cousin Ted. Edna
+   never knew of or never accepted Ted's death. When the phone rings,
+   Edna assumes that it is Ted and starts talking. Her number is
+   unlisted. Only Ted had it. A natural mistake. This also partially
+   explains why Edna's number is written on the wall in Ted's bathroom.
+
+   2) Also, there are several places where nudity needs to be removed:
+   the posters in the gym, and the statue in the hall.
+
+   There were two posters in Dead Cousin Ted's room: A swimsuit calendar,
+   and a mummy poster. The mummy is in a playmate pose, completely
+   wrapped in bandages, no skin visible. We ended up removing both.
+
+   The statue was a classical reclining nude. I told one of the Nintendo
+   minions that it was a Michelangelo (the sculptor, not the turtle).
+   There was a glimmer of hope that we could keep it if it was really
+   art, so I sent Gary to find a book of Michelangelo's work, in the hope
+   that he had made a statue that was similar. In fact he had, a work
+   called Dawn, for the Medici Chapel.
+
+   Nintendo's minions said we could keep the statue if we did something
+   about the crotch. But if they could see pubic hair where there is
+   none, what would they see if we tried to hide it?
+
+   We removed the statue.
+
+   3) There is also a reference at the end of the game to an "NES Scumm
+   System" that we're not sure we understand. Please advise as to the
+   meaning of this reference.
+
+   In the credits, which are shown after the conclusion of the game,
+   there are two occurrences of the word Scumm, which stands for Script
+   Creation Utility for Maniac Mansion. Scumm is the story game
+   development system which was used to produce Maniac. They understood,
+   and asked "What is NES SCUMM?" That is the version of Scumm that we
+   did for the Nintendo. "Yeah, but it says NES SCUMM. What will people
+   think?"
+
+   I don't know what people will think. And we will never know what
+   people will think. I took it out.
+
+   They didn't object to the nasty stuff that happens to the hamster. Ron
+   suggested that it was just violence.
+
+   People from Nintendo say with pride that even though they are growing,
+   the number of letters they receive from special interest groups is
+   declining. They insist that their standards are not intended to make
+   their products bland, but that is the inevitable result.
+
+   Part of the formal product submission includes a complete listing of
+   all of the game text. They scan that for occurrences of the bad words,
+   but they are also looking for religious artifacts.
+
+   Nintendo is a jealous god.
+     _________________________________________________________________
+
+                           Things in Maniac Mansion
+
+  Hamster:
+
+   Sid or Razor can be ordered (by you) to put the hamster in the
+   microwave oven and blow it up.
+
+   If a kid then gives the hamster remains to Weird Ed, then he slowly
+   realizes what it is. In the next scene, the kid is replaced by a
+   tombstone in the front yard.
+
+   Dr. Fred comes to Weird Ed, saying that the evil meteor needs a
+   hamster and an electric cattle prod.
+
+  Nurse Edna:
+
+   When she locks a boy in the dungeon, she says "I should have tied you
+   to my bed, cutie."
+
+   When she locks a girl in the dungeon, she's says "You're lucky you
+   aren't a boy."
+
+   When someone calls her from the phone in the library, she says "Is
+   this a prank phone call? There's no heavy breathing. Let me show you
+   how to do it."
+
+  Purple Tentacle:
+
+   When he locks a kid in the dungeon, he says "I hope you rot."
+
+  Meteor Police:
+
+   He calls the Purple Tentacle Sucker Face.
+
+   He calls the meteor Crater Head.
+
+  Meltdown:
+
+   If the reactor blows up, everyone within a five mile radius dies.
+   (This is a cautionary story about home nuclear power.)
+
+-------------------------------------------------------------------
+11.0  INTERESTING TIDBITS
+-------------------------------------------------------------------
+
+        When they were originally working on Maniac Mansion for
+home computers such as the Amiga, IBM Compatibles, Commodore 64,
+etc. they tried to get permission from Coke to use their trademark
+but Coke wouldn't let them so they changed it.
+        
+                "When we got permission from Pepsi, there was an idea
+        of a cross-promotion, but it didn't happen.
+                We did add a feature for a Pepsi-sponsored contest, but
+        it was never used. The  house number is random. You send it
+        in, maybe you'd win something."
+
+                -- Douglas Crockford
+
+CP: What was the point of the Pepsi machine in Dr. Fred's Lab anyway?
+    I know you can get a can of Pepsi out of it with the quarter,
+    but was there any actual use for it?
+
+DC: In an early version of the original game, the can had a long
+    serial number. You were supposed to think you could type that
+    number into the machine and save the world. But it was a trick.
+    If you tried it, it wouldn't work. Boom. I thought it was a nasty
+    puzzle and suggested that it be removed.
+
+[NOTE: This next part is NOT referring to the non-hamster version.
+Nor does it refer to the prototype version. (See Section 12.0)]
+
+
+DC: There were two NES versions. One was developed in Japan. The
+    other I wrote about.
+
+CP: Which version was produced in Japan?
+
+DC: A Japanese version. Never sold in the US. Very different.
+
+
+        I've had a chance to play the Japanese version of Maniac
+Mansion and I must say it is quite strange.  Released by Jaleco
+for the Famicom market in 1988, the game was apparantly programmed
+in Japan and bears little resemblance to the great game we know
+and love.  The graphics are very plain looking and the characters
+have a more Japanese look to them.  The basic game is the same,
+but the graphics are totally different and the control isn't
+as good as the U.S./European version of the game.
+        The U.S. version came out in 1990 and was actually
+programmed by LucasArts, who created the original version of Maniac
+Mansion.  Many of the same programmers actually helped in it's
+creation.  It's no wonder the U.S. version turned out so great
+and the Japanese version turned out so poorly.  Of course, I must
+admit the extra two years allowed for more advances in programming
+techniques to be discovered that would allow for a better game.
+Still, the Japanese version is a bit of an oddity and I wouldn't
+reccomend parting with very much of your hard-earned cash for this
+version of the game.
+        I suppose I should mention that a rom image of the Famicom
+version of Maniac Mansion has been floating around the internet
+for a couple of months.  PLEASE, DO NOT SEND ME A COPY OF IT!
+I DON'T NEED IT!  PLEASE DON'T ASK ME WHERE YOU CAN GET IT EITHER!
+        
+
+        "The funny thing about the censorship:  Most of the stuff
+        they cut was showcased in their own magazine."
+
+                -- Douglas Crockford
+
+        The above quote is in reference to the fact that when
+Nintendo Power got around to doing a small strategy section/review
+of the game, they took pictures of the uncensored version for
+the magazine.  Thus you can see the statue of Nurse Edna, the extra
+stuff on the walls of Dead Cousin Ted's room, etc.
+
+        The NES version of Maniac Mansion was based on the scripts
+used for the C64 version of the game.
+
+-------------------------------------------------------------------
+12.0  AFTERWORD
+-------------------------------------------------------------------
+
+        Hopefully with this FAQ you were able to find the
+information you needed about Maniac Mansion.  The multiple
+endings, quirks, and bugs in this game give it considerable
+replay value.
+        As mentioned in the Doug's article, after this game had been submitted
+to Nintendo for evaluation, it was returned to the
+programmers and they were told to delete, remove, and/or change
+certain things.  They had to change some of the dialogue.  A nude
+statue on the second floor had to be removed.  The word SCUMM had
+to be removed from the credits.  SCUMM stands for Script Creation
+Utility for Maniac Mansion.  This is the programming language used
+by LucasArts to create the game.  There was a pennant hanging on the
+wall in Ed's room that said "SCUMM U. RAH!" that was supposed to
+be removed, but all the programmers did was make it exactly the same
+color as the background.  If you click on the wall next to the door
+in Ed's room you will find the pennant.  It was only after they
+changed these things that Nintendo allowed the game to be released.
+        The evaluators at Nintendo happened to miss the fact that you
+could blow up the hamster in the microwave.  After the game had been
+released and sold, this was discovered and Nintendo forced them to
+once again change the game to remove this.  Nintendo has since
+dropped their censorship policies in favor of a ratings system.
+        There was an article in an old issue of GamePro that
+mentions the hamster being removed from the game.  It implied that
+an edited version of the game was released in the U.S.  This is not
+true at all.  According to Douglas Crockford, the programmers
+actually changed the code, but another run of cartridges were never
+produced.  So, there was only one version of Maniac Mansion released commercial
+ly in North America.
+        The PAL version of the game is another story entirely.  I
+received the following email from a gamer living in the UK.
+
+        "I was reading v2.0 of your NES Maniac Mansion FAQ. Reading
+        about the exploding hamster led me to try this out on my UK
+        version of the game (NES-JM-UKV). [So you can infer that MM
+        was definitely released in the UK, and I would have thought
+        Europe as well.]
+
+        THIS VERSION HAS HAD THE EXPLODING HAMSTER REMOVED! So the
+        altered version was released, but maybe only in the UK
+        and/or Europe. This makes sense, since games were usually
+        released in Europe some time after their release in the USA.
+        I don't know whether all or just some of the cartridges sold
+        in the UK/Europe were the modified version.
+
+        When various characters attempt to "USE HAMSTER IN MICROWAVE"
+        or "USE MICROWAVE WITH HAMSTER", the following replies are
+        given:
+
+        Wendy, Dave and Bernard: "How sick!"
+        Razor and Syd: "No way, man, these things are just loaded
+        with cholesterol!""
+
+
+                -- Mark Knibbs
+
+
+        Also, if anyone has a prototype or review copy of
+this game I would really like to hear from you.  Thanks.
+
+--------------------------------------------------------------------
+13.0  CREDITS
+--------------------------------------------------------------------
+
+        Special thanks go out to the following:
+
+GOD - Without whom none of this would have ever been possible.
+
+Douglas Crockford - Who let me use his article, for putting up
+                    with my numerous questions, as well as helping
+                    to create my favorite NES game.
+                    [http://www.communities.com/people/crock/]
+
+Ron Gilbert
+and Gary Winnick - Who originally created Maniac Mansion.
+
+Mark Knibbs - Who gave me information on the UK edition
+              of Maniac Mansion and who also helped me find
+              the Famicom version of the game.
+              [markk@netcomuk.co.uk]
+
+Everyone Else who
+worked on the original
+MM as well as those who
+helped convert it to the NES - Thank you!  You did a marvelous job.
+
+--------------------------------------------------------------------
+END OF FAQ
+--------------------------------------------------------------------
+
