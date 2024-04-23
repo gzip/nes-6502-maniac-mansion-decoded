@@ -7,6 +7,14 @@ SET SNARFBLASM=..\tools\snarfblasm
 SET FLIPS=tools\flips
 SET DD=tools\dd
 
+IF "%1" == "clean" (
+  ECHO Cleaning up generated files...
+  DEL src\*.ips
+  DEL %PATCH_NAME%
+  DEL %OUT_ROM%
+  EXIT /B
+)
+
 IF NOT EXIST %MM_ROM% (
   ECHO "Expected to find the following ROM (see build.bat to edit filename), exiting..."
   ECHO %MM_ROM%
