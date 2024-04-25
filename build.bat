@@ -21,6 +21,16 @@ IF NOT EXIST %MM_ROM% (
   EXIT /B
 )
 
+IF "%1" == "patches" (
+  WHERE /Q node
+  IF NOT ERRORLEVEL 1 (
+    node tools\generator\generator.js patches
+  ) ELSE (
+    ECHO Node executable not found, unable to generate the patches, exiting...
+  )
+  EXIT /B
+)
+
 WHERE /Q git
 IF NOT ERRORLEVEL 1 (
   ECHO Checking out clean roms...
@@ -28,20 +38,22 @@ IF NOT ERRORLEVEL 1 (
 )
 
 ECHO Building patches...
-cd src
+CD src
 %SNARFBLASM% clear_data.asm
 %SNARFBLASM% clear_banks.asm
 %SNARFBLASM% decompress.asm
 %SNARFBLASM% decompressed_tiles.asm
+%SNARFBLASM% layout_metadata.asm
 %SNARFBLASM% decompressed_layouts.asm
 %SNARFBLASM% decompressed_title_screens.asm
 %SNARFBLASM% remap_table.asm
-cd ..
+CD ..
 
 ECHO Patching...
 %FLIPS% src\clear_data.ips %MM_ROM%
 %FLIPS% src\decompress.ips %MM_ROM%
 %FLIPS% src\remap_table.ips %MM_ROM%
+%FLIPS% src\layout_metadata.ips %MM_ROM%
 %FLIPS% src\decompressed_layouts.ips %MM_ROM%
 %FLIPS% src\patches\maniac_mousedriver.ips %MM_ROM%
 %FLIPS% src\patches\hide_keypad.ips %MM_ROM%

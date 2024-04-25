@@ -1,0 +1,346 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="data.js" type="text/javascript"></script>
+<script type="text/javascript">
+var romData;
+
+var functions = [
+    "compressRawData (data)",
+    "compressRoomData (data)",
+    "compressTileData (data)",
+    "decompressDataRange (0000-FFFF)",
+    "decompressRawData (data)",
+    "dumpRoomData ()",
+    "dumpScriptsData ()",
+    "dumpTableData ()",
+    "generateClearPatch ()",
+    "generateLayoutMetadataPatch ()",
+    "generateLayoutPatch ()",
+    "generateTilesPatch ()",
+    "generateTilesTablePatch ()",
+    "generateTitlePatch ()",
+    "remapNametable (data)",
+];
+
+function drawUi (which)
+{
+    switch (which)
+    {
+        case "setfields":
+            tileSets.forEach(function (val) {
+                document.write("<option value='" + val[0] + "'>" + val[1] + "</option>");
+            });
+        break;
+        case "functions":
+            functions.forEach(function (val) {
+                document.write("<option value='" + val.split(" ")[0] + "'>" + val + "</option>");
+            });
+        break;
+    }
+}
+
+function initUi ()
+{
+    document.querySelector('[name=rom]').onchange = onSelectFile;
+    window.addEventListener("keypress", function(e)
+    {
+        var clname = "hideui";
+        var bdclass = document.body.className;
+        switch (e && e.code)
+        {
+            case "KeyH":
+                document.body.className = bdclass.indexOf(clname) === -1 ? bdclass + " " + clname : bdclass.replace(" " + clname, "");
+            break;
+        }
+    });
+}
+
+function updateUi ()
+{
+    var fn = document.getElementsByName("fn")[0].value;
+    var arg = document.getElementsByName("arg")[0].value.toUpperCase();
+    var result = window[fn].call(fn, arg);
+    if (result) {
+        console.log(result);
+    }
+    return false;
+}
+
+function onSelectFile ()
+{
+    var files = this.files || {};
+    if (files.length > 0)
+    {
+        // load file contents
+        readFile(files[0]);
+    }
+}
+
+function readFile (file)
+{
+    var reader = new FileReader();
+    reader.readAsArrayBuffer(file);
+
+    reader.onload = function ()
+    {
+        romData = new Uint8Array(reader.result);
+        if (verifyData(romData))
+        {
+            document.body.className = "romloaded";
+            document.getElementById("arg").focus();
+        }
+    };
+
+    reader.onerror = function (error)
+    {
+        console.log('Error: ', error);
+    };
+}
+
+function renderContent (frag, container)
+{
+    if (!container) {
+        container = document.getElementById("container");
+        container.innerHTML = '';
+    }
+    container.appendChild(frag);
+}
+
+function renderData (data)
+{
+    var container = document.createElement("pre");
+    container.innerHTML = data;
+    renderContent(container);
+}
+
+
+function decompressDataRange (range)
+{
+    range = range.split("-");
+    var data = decompressData(romData, parseInt(range[0], 16), parseInt(range[1], 16), parseInt(range[2] || "0", 16));
+    renderDecompressedData(data);
+}
+
+function decompressRawData (data)
+{
+    var bytes = data.split(" ");
+    var decompressed = decompressData(bytes, 0, data.length);
+    renderDecompressedData(decompressed);
+}
+
+function compressRawData (data)
+{
+    var container = document.createElement("pre");
+    var bytes = compressData (data);
+    bytes.unshift("");
+    container.innerHTML = bytes.join(" ").match(/ [0-9A-F\ ]{1,47}/g).join("\n");
+    renderContent(container);
+}
+
+function compressRoomData (data, entrySize)
+{
+    var container = document.createElement("pre");
+    var bytes = data.split(" ");
+    var compressed = compressChunkedData(bytes, entrySize || bytes.length / 16);
+    compressed.unshift(toHex(bytes.length / 16));
+    console.log(compressed.length);
+    container.innerHTML = formatData(compressed);
+    renderContent(container);
+}
+
+function compressTileData (data)
+{
+    compressRoomData(data, 16);
+}
+
+function remapNametable (data)
+{
+    var container = document.createElement("pre");
+
+    data = data.split("\n").join(" ").split(" ").map(toDec);
+
+    for (var d = 0; d < data.length; d++)
+    {
+        if (data[d] > 0x61 && (data[d] < 0x81 || data[d] > 0x8F)) {
+            data[d] += 0x24;
+        }
+    }
+
+    container.innerHTML = formatData(data.map(toHex), 16);
+    renderContent(container);
+}
+
+function renderDecompressedData (data, includeRaw)
+{
+    var bytes = data.map(function(g) {
+        return g.expanded.join(" ") + (includeRaw ? " : " + g.raw.join(" ") + " : " + g.rom : "");
+    });
+    renderData(bytes.join("\n"));
+}
+
+function dumpScriptsData ()
+{
+    var scripts = getScriptsData(romData);
+    var out = [];
+
+    scripts.forEach(function eachRoom (script)
+    {
+        out.push([
+            "SCRIPT " + script.id,
+            "(" + script.bank + ":" + script.addr + (script.rom ? "/" + toHex(script.rom) : "") + ")",
+            script.header,
+            "(" + (script.data && script.length || 0) + ")",
+            script.data
+        ].join(" "));
+    });
+
+    renderData(out.join("\n"));
+}
+
+function dumpRoomData ()
+{
+    var rooms = getRoomsData(romData);
+    var out = [];
+    var objs = [];
+
+    rooms.forEach(function eachRoom (room)
+    {
+        out.push("-------------------------------------");
+        out.push([
+            "ROOM: '" + room.name + "'",
+            "id: " + room.id,
+            "bank: " + toHex(room.bank),
+            "mem: " + toHex(room.mem),
+            "rom: " + toHex(room.rom),
+            "len: " + room.len,
+            "tileIndex: " + toHex(room.tileIndex, true),
+            "objs: " + room.numObjs,
+            "scripts: " + JSON.stringify(room.scripts),
+            "unknown: " + room.unknown.map(toHex).join(" ")
+        ].join(", "));
+
+        room.objs.forEach(function eachRoomObj (obj)
+        {
+            out.push(
+                (obj.id.length < 4 ? "00" : "") + obj.id + ": '" + obj.name + "' object: " + obj.offset + "/" + obj.rom +
+                 ", state: " + obj.state.initial + "/" + obj.state.ram + "/" + obj.state.rom +
+                 ", state_change: " + obj.stateChange.offset + "/" + obj.stateChange.rom +
+                 ", verbs: " + JSON.stringify(obj.verbs)
+            );
+            out.push("      " + obj.scripts.data);
+            //out.push((obj.id.length < 4 ? "00" : "") + obj.id + "\t" + obj.name + "\t" + obj.code);
+
+            var id = toDec(obj.id);
+            if (objs[id]) {
+                console.log("Found dupe id: " + obj.name + ", dupe of: " + objs[id]);
+            }
+            objs[id] = obj.name + " in " + room.name + "(" + room.id + ")";
+        });
+    });
+
+    out.push("");
+    objs.forEach(function eachObj (obj, i)
+    {
+        out.push(toHex(i, true) + ": " + obj);
+    });
+
+    renderData(out.join("\n"));
+}
+
+function renderTableData (key)
+{
+    var data = getDecompressedData(romData);
+    renderData(data[key].join("\n"));
+}
+
+function dumpTableData ()
+{
+    renderTableData('lines');
+}
+
+function generateClearPatch ()
+{
+    renderTableData('clearPatch');
+}
+
+function generateLayoutMetadataPatch ()
+{
+    renderTableData('layoutMetadataPatch');
+}
+
+function generateLayoutPatch ()
+{
+    renderTableData('layoutPatch');
+}
+
+function generateTilesTablePatch ()
+{
+    renderTableData('tilesTablePatch');
+}
+
+function generateTilesPatch ()
+{
+    renderTableData('tilesPatch');
+}
+
+function generateTitlePatch ()
+{
+    renderTableData('titlePatch');
+}
+
+</script>
+<style>
+fieldset { float: left; border:1px solid #ccc; border-radius:3px; margin-bottom:10px; }
+body { font:100% arial,sans-serif; }
+legend { font-size:90%; }
+label { font-size:80%; padding-right:1ex; }
+label[for=set], label[for=arg] { margin-left:2ex; }
+select, input[type=text] { border:1px solid #ccc; border-radius:3px; }
+input[name=arg] { width: 3em; }
+button { margin-left: 1ex; }
+li { font-size:80%; padding:5px; }
+#setfield, #api { display:none; }
+#container { clear:both;}
+#help { clear:both; }
+.romloaded #setfield, .romloaded #api { display:inline-block; }
+body.hideui { margin: 0; }
+.hideui #ui, .hideui #help { display: none; }
+</style>
+<title>Maniac Mansion Data Generator</title>
+</head>
+<body>
+<form onSubmit="updateUi(); return false;" id=ui>
+    <fieldset id=details>
+        <legend>File Details</legend>
+        <label for=rom>Select your ROM:</label>
+        <input name=rom id=rom type=file></input>
+    </fieldset>
+    <fieldset id=api>
+        <legend>API</legend>
+        <label for=fn>Function:</label>
+        <select name=fn id=fn>
+            <script>drawUi("functions");</script>
+        </select>
+        <span id=argfield>
+            <label for=arg>Arg:</label>
+            <input type=text name=arg id=arg length=3></input>
+        </span>
+        <button type=submit>Run</button>
+    </fieldset>
+</form>
+<script>initUi();</script>
+<div id="container"></div>
+<fieldset id=help>
+    <legend>Help</legend>
+    <ol>
+        <li>Select a Maniac Mansion ROM file first.</li>
+        <li>Use the APIs to explore the data.</li>
+        <ul>
+            <li>The render functions will draw to the screen.</li>
+            <li>The fetch functions will log their results to the console.</li>
+        </ul>
+    </ol>
+</fieldset>
+</body>
+</html>
