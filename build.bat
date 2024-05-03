@@ -1,16 +1,24 @@
 @ECHO OFF
 SETLOCAL
+SET BUILD_DIR=%~DP0
 SET MM_ROM="Maniac Mansion (USA).nes"
 SET OUT_ROM="Maniac Mansion (USA) Decoded.nes"
 SET PATCH_NAME="Maniac Mansion (USA) Decoded v1_2.bps"
-SET SNARFBLASM=..\tools\snarfblasm
+SET PATCH_PUZZLE_NAME="Maniac Mansion (USA) Decoded with Puzzle v1_2.bps"
+SET SNARFBLASM=%BUILD_DIR%tools\snarfblasm
 SET FLIPS=tools\flips
 SET DD=tools\dd
+
+CD "%BUILD_DIR%"
 
 IF "%1" == "clean" (
   ECHO Cleaning up generated files...
   DEL src\*.ips
+  DEL src\puzzle\model_room.ips
+  DEL src\puzzle\chainsaw.ips
+  DEL src\puzzle\stairs.ips
   DEL %PATCH_NAME%
+  DEL %PATCH_PUZZLE_NAME%
   DEL %OUT_ROM%
   EXIT /B
 )
@@ -74,6 +82,10 @@ ECHO Patching decompressed tiles and layouts...
 %FLIPS% src\decompressed_tiles.ips %OUT_ROM%
 %FLIPS% src\decompressed_title_screens.ips %OUT_ROM%
 
+IF "%1" == "puzzle" (
+  %FLIPS% src\puzzle\puzzle_base.ips %OUT_ROM%
+)
+
 ECHO Patching various fixes...
 %FLIPS% src\patches\under_house.ips %OUT_ROM%
 %FLIPS% src\patches\coin_box.ips %OUT_ROM%
@@ -84,3 +96,19 @@ ECHO Patching various fixes...
 %FLIPS% src\patches\radioactive_slime.ips %OUT_ROM%
 
 %FLIPS% -c --bps %MM_ROM% %OUT_ROM% %PATCH_NAME%
+
+IF "%1" == "puzzle" (
+  ECHO Building puzzle patches...
+  CD src\puzzle
+  %SNARFBLASM% model_room.asm
+  %SNARFBLASM% chainsaw.asm
+  %SNARFBLASM% stairs.asm
+  CD "%BUILD_DIR%"
+
+  ECHO Patching in puzzle...
+  %FLIPS% src\puzzle\model_room.ips %OUT_ROM%
+  %FLIPS% src\puzzle\chainsaw.ips %OUT_ROM%
+  %FLIPS% src\puzzle\stairs.ips %OUT_ROM%
+
+  %FLIPS% -c --bps %MM_ROM% %OUT_ROM% %PATCH_PUZZLE_NAME%
+)
