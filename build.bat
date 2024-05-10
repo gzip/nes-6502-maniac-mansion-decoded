@@ -1,10 +1,11 @@
 @ECHO OFF
 SETLOCAL
 SET BUILD_DIR=%~DP0
+SET VERSION=1_3
 SET MM_ROM="Maniac Mansion (USA).nes"
 SET OUT_ROM="Maniac Mansion (USA) Decoded.nes"
-SET PATCH_NAME="Maniac Mansion (USA) Decoded v1_2.bps"
-SET PATCH_PUZZLE_NAME="Maniac Mansion (USA) Decoded with Puzzle v1_2.bps"
+SET PATCH_NAME="Maniac Mansion (USA) Decoded v%VERSION%.bps"
+SET PATCH_PUZZLE_NAME="Maniac Mansion (USA) Decoded with Puzzle v%VERSION%.bps"
 SET SNARFBLASM=%BUILD_DIR%tools\snarfblasm
 SET FLIPS=tools\flips
 SET DD=tools\dd
