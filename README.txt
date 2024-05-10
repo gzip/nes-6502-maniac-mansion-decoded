@@ -7,6 +7,10 @@ and layouts. The number of tiles for each room is also maximized to make room fo
 A lot of space is freed up as a result which makes it easier to edit game objects and text as well.
 As such, this hack can serve as a base for new hacks such as Maniac Mansion Uncensored.
 
+As a proof of concept, a new puzzle chain is included which modifies existing objects, adds new
+objects, and adds a whole new room as a final payoff. It does not affect the rest of the game.
+You can select the base patch to omit this addition.
+
 The hack also includes the Maniac Mansion Mouse Hack and fixes a few glitches in the game:
 
 - The glitched graphics in the room under the house are fixed
@@ -31,3 +35,8 @@ File SHA-1: 7317D1F1096B57F6AB8F3001BCDD35665C291B1A
 File CRC32: 68309D06
 ROM SHA-1: 8A8BBECC77FDF59826257754F357D38A7F825971
 ROM CRC32: D9F5BD1
+
+Source Code
+
+Source code is available on github:
+https://github.com/gzip/nes-6502-maniac-mansion-decoded/
