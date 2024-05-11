@@ -13,28 +13,28 @@ Load_Tile_Buffer        = $E5A1
 Bank_Switch             = $FFA0
 Set_MMC1_Control        = $FFB8
 
-.PATCH 00:9DF0
-Check_For_Outer_Bank:
-  ; check if the second title screen is loading
-  CPX #$04
-  BNE +
-    JSR Set_Outer_Bank_1   ; and switch outer bank if so
-+ LDA $A439,X              ; run hijacked code
-  RTS
+;.PATCH 00:9DF0
+;Check_For_Outer_Bank:
+;  ; check if the second title screen is loading
+;  CPX #$04
+;  BNE +
+;    JSR Set_Outer_Bank_1   ; and switch outer bank if so
+;+ LDA $A439,X              ; run hijacked code
+;  RTS
 
-.PATCH 00:9F38               ; in Title_Screen_Set_Base_Addr
-  JSR Check_For_Outer_Bank
+;.PATCH 00:9F38               ; in Title_Screen_Set_Base_Addr
+;  JSR Check_For_Outer_Bank
 
-.PATCH 00:9FDD               ; in Title_Screen_Load_Byte
-  JSR Title_Screen_Write_Byte; was BMI Title_Screen_Run
-  JSR Inc_Addr_F0
-  RTS
-  NOP
+;.PATCH 00:9FDD               ; in Title_Screen_Load_Byte
+;  JSR Title_Screen_Write_Byte; was BMI Title_Screen_Run
+;  JSR Inc_Addr_F0
+;  RTS
+;  NOP
 
 .PATCH 0F:C1FD               ; in Set_Room_Layout_Addrs:Set_Nametable_Src_Addr
-  LDA Room_Layout_Metadata+4
+  LDA Room_Layout_Metadata+6
   STA $59
-  LDA Room_Layout_Metadata+5
+  LDA Room_Layout_Metadata+7
   STA $5A
   NOP
   NOP
@@ -81,35 +81,35 @@ Check_For_Outer_Bank:
 .PATCH 0F:E597
   JSR Load_Tile_Buffer_And_Reset_Outer ; was JSR Load_Tile_Buffer
 
-.PATCH 0F:E511
-  JSR Load_Raw_Byte          ; was Load_RLE_Byte
+;.PATCH 0F:E511
+;  JSR Load_Raw_Byte          ; was Load_RLE_Byte
 
-.PATCH 0F:E5A1
-  NOP                        ; was LDY #$00
-  JSR Load_Tiles_Count       ; was LDA (Src_Addr+0),Y
+;.PATCH 0F:E5A1
+;  NOP                        ; was LDY #$00
+;  JSR Load_Tiles_Count       ; was LDA (Src_Addr+0),Y
 
 ; avoid src_addr increment that was needed to bypass tile count (which is now relocated)
-.PATCH 0F:E5AF
-  NOP
-  NOP
-  NOP
-  NOP
-  NOP
-  NOP
-  NOP
-  NOP
+;.PATCH 0F:E5AF
+;  NOP
+;  NOP
+;  NOP
+;  NOP
+;  NOP
+;  NOP
+;  NOP
+;  NOP
 
-.PATCH 0F:E5D2               ; in Load_Tile_Buffer
-  JSR Load_Raw_Byte          ; was Load_RLE_Byte
+;.PATCH 0F:E5D2               ; in Load_Tile_Buffer
+;  JSR Load_Raw_Byte          ; was Load_RLE_Byte
 
-.PATCH 0F:E60F               ; in Load_Tile_Buffer
-  JSR Load_Raw_Byte          ; was Load_RLE_Byte
+;.PATCH 0F:E60F               ; in Load_Tile_Buffer
+;  JSR Load_Raw_Byte          ; was Load_RLE_Byte
 
 .PATCH 0F:E6C5               ; in Load_Attribute_Table_Buffer
   JSR Get_Tables_Bank_Num    ; was Get_Bank_Num
 
-.PATCH 0F:E6F0               ; in Load_Attribute_Table_Buffer
-  JSR Load_Raw_Byte          ; was Load_RLE_Byte
+;.PATCH 0F:E6F0               ; in Load_Attribute_Table_Buffer
+;  JSR Load_Raw_Byte          ; was Load_RLE_Byte
 
 .PATCH 0F:E91D               ; this is all as-is untouched, used for reference
 Load_RLE_Byte:
@@ -152,18 +152,14 @@ Inc_RLE_Src_Addr:
 + RTS
 
 .PATCH 0F:FBCD
-  Load_Raw_Byte:
-    LDY #$00
-    LDA (Src_Addr+0),Y
-    JSR Write_Decompressed_Byte_To_RAM
-    JSR Inc_RLE_Src_Addr
-    RTS
+;  Load_Raw_Byte:
+;    LDY #$00
+;    LDA (Src_Addr+0),Y
+;    JSR Write_Decompressed_Byte_To_RAM
+;    JSR Inc_RLE_Src_Addr
+;    RTS
   Load_Tiles_Count:
-    LDA Tiles_Table_Index
-    ASL A
-    ASL A
-    TAX
-    LDA Tiles_Table+1,X
+    LDA Room_Layout_Metadata+5
     RTS
   Set_Outer_And_Inner_Banks_Then_Set_Table_Index:
     JSR Set_Outer_And_Check_Bank
@@ -200,7 +196,7 @@ Inc_RLE_Src_Addr:
     JSR Load_Tile_Buffer
     JMP Set_Outer_Bank_0
   Get_Tables_Bank_Num:
-    LDA Room_Layout_Metadata+3
+    LDA Room_Layout_Metadata+4
     JMP Check_If_New_Bank
   Store_Bank_And_Switch_Outer:
     STA Bank_Num
