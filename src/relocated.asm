@@ -32,9 +32,9 @@ Set_MMC1_Control        = $FFB8
 ;  NOP
 
 .PATCH 0F:C1FD               ; in Set_Room_Layout_Addrs:Set_Nametable_Src_Addr
-  LDA Room_Layout_Metadata+6
+  LDA Room_Layout_Metadata+4
   STA $59
-  LDA Room_Layout_Metadata+7
+  LDA Room_Layout_Metadata+5
   STA $5A
   NOP
   NOP
@@ -159,7 +159,7 @@ Inc_RLE_Src_Addr:
 ;    JSR Inc_RLE_Src_Addr
 ;    RTS
   Load_Tiles_Count:
-    LDA Room_Layout_Metadata+5
+    LDA Room_Layout_Metadata+15
     RTS
   Set_Outer_And_Inner_Banks_Then_Set_Table_Index:
     JSR Set_Outer_And_Check_Bank
@@ -196,7 +196,7 @@ Inc_RLE_Src_Addr:
     JSR Load_Tile_Buffer
     JMP Set_Outer_Bank_0
   Get_Tables_Bank_Num:
-    LDA Room_Layout_Metadata+4
+    LDA Room_Layout_Metadata+14
     JMP Check_If_New_Bank
   Store_Bank_And_Switch_Outer:
     STA Bank_Num
