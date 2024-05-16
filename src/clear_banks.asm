@@ -1,5 +1,8 @@
-.PATCH $04
-  .byte $20                  ; 32 banks SUROM, was 16 SNROM
+.PATCH $40010                ; empty bank 17
+  .dsb $4000, $FF
 
-.PATCH $44010                ; start at bank 17
-  .incbin "empty_banks.dat"  ; 14 banks worth of $FF
+.PATCH $7C010                ; empty bank 31
+  .dsb $4000, $FF
+
+;.PATCH $44010                ; start at bank 31
+;  .incbin "empty_banks.dat"  ; 14 banks worth of $FF
