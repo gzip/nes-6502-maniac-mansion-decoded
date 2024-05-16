@@ -8,6 +8,7 @@ Bank_Num                = $6F04
 Title_Screen_Write_Byte = $A039
 Inc_Addr_F0             = $A164
 Tiles_Table             = $DBF5
+Get_Bank_Num            = $DF76
 Check_If_New_Bank       = $DF85
 Load_Tile_Buffer        = $E5A1
 Bank_Switch             = $FFA0
@@ -41,20 +42,25 @@ Set_MMC1_Control        = $FFB8
   NOP
 
 .PATCH 0F:C20A               ; in Set_Room_Layout_Addrs:Set_Attr_Table_Src_Addr
-  LDA $59
-  CLC
-  ADC Room_Layout_Metadata+8
+  LDA Room_Layout_Metadata+8
   STA $5B
-  LDA $5A
-  ADC Room_Layout_Metadata+9
+  LDA Room_Layout_Metadata+9
   STA $5C
+  NOP
+  NOP
+  NOP
+  NOP
+  NOP
 
-.PATCH 0F:D851
+.PATCH 0F:D851                ; about to setup nmi
   JSR Store_Bank_And_Switch_Outer
 
 .PATCH 0F:E367               ; in nmi
   JMP Reset_Outer_For_Nmi
   Return_To_Nmi:
+
+;.PATCH 0F:E3EF
+;  JSR Safe_Bank_Switch
 
 .PATCH 0F:E40C               ; in nmi
   JMP Restore_Outer_After_Nmi; was PHA TAX PHA
@@ -62,24 +68,24 @@ Set_MMC1_Control        = $FFB8
 .PATCH 0F:E4EF               ; in Load_Nametable_Buffer
   JSR Get_Tables_Bank_Num    ; was Get_Bank_Num
 
-.PATCH 0F:E547
-  JSR Set_Outer_And_Check_Bank ; was JSR Check_If_New_Bank
+;.PATCH 0F:E547
+;  JSR Set_Outer_And_Check_Bank ; was JSR Check_If_New_Bank
 
 ; in loadCostumeSet
-.PATCH 0F:EE1A
-  JSR Set_Outer_And_Inner_Banks_Then_Set_Table_Index ; was JSR Check_If_New_Bank
+;.PATCH 0F:EE1A
+;  JSR Set_Outer_And_Inner_Banks_Then_Set_Table_Index ; was JSR Check_If_New_Bank
 
 ; move the number of tiles into the unused byte in the tiles table
 ; that way we avoid funny offsets in the tiles data that would complicated editing
-.PATCH 0F:E54F
-  NOP                        ; was LDY #$00
-  LDA Tiles_Table+1,X        ; was LDA (Src_Addr+0),Y
+;.PATCH 0F:E54F
+;  NOP                        ; was LDY #$00
+;  LDA Tiles_Table+1,X        ; was LDA (Src_Addr+0),Y
 
-.PATCH 0F:E589
-  JSR Load_Tile_Buffer_And_Reset_Outer ; was JSR Load_Tile_Buffer
+;.PATCH 0F:E589
+;  JSR Load_Tile_Buffer_And_Reset_Outer ; was JSR Load_Tile_Buffer
 
-.PATCH 0F:E597
-  JSR Load_Tile_Buffer_And_Reset_Outer ; was JSR Load_Tile_Buffer
+;.PATCH 0F:E597
+;  JSR Load_Tile_Buffer_And_Reset_Outer ; was JSR Load_Tile_Buffer
 
 ;.PATCH 0F:E511
 ;  JSR Load_Raw_Byte          ; was Load_RLE_Byte
@@ -104,6 +110,12 @@ Set_MMC1_Control        = $FFB8
 
 ;.PATCH 0F:E60F               ; in Load_Tile_Buffer
 ;  JSR Load_Raw_Byte          ; was Load_RLE_Byte
+
+.PATCH 0F:E632               ; in Load_Room_Palette_Buffer
+  JSR Reset_Outer_Get_Bank   ; was Get_Bank_Num
+
+.PATCH 0F:E663               ; in Load_128_Byte_Buffer
+  JSR Reset_Outer_Get_Bank   ; was Get_Bank_Num
 
 .PATCH 0F:E6C5               ; in Load_Attribute_Table_Buffer
   JSR Get_Tables_Bank_Num    ; was Get_Bank_Num
@@ -158,15 +170,15 @@ Inc_RLE_Src_Addr:
 ;    JSR Write_Decompressed_Byte_To_RAM
 ;    JSR Inc_RLE_Src_Addr
 ;    RTS
-  Load_Tiles_Count:
-    LDA Room_Layout_Metadata+15
-    RTS
-  Set_Outer_And_Inner_Banks_Then_Set_Table_Index:
-    JSR Set_Outer_And_Check_Bank
-    ; force an index which will write all 256 tiles
-    LDA #$68
-    STA Tiles_Table_Index    ; ends up #$00
-    RTS
+;  Load_Tiles_Count:
+;    LDA Room_Layout_Metadata+15
+;    RTS
+;  Set_Outer_And_Inner_Banks_Then_Set_Table_Index:
+;    JSR Set_Outer_And_Check_Bank
+;    ; force an index which will write all 256 tiles
+;    LDA #$68
+;    STA Tiles_Table_Index    ; ends up #$00
+;    RTS
   Set_Outer_And_Check_Bank:
     JSR Check_If_New_Bank
     JMP Set_Outer_Bank_1
@@ -182,6 +194,7 @@ Inc_RLE_Src_Addr:
     LDA #$10
     JMP Set_Outer_Bank
   Set_CHR_Bank_1:
+;    JSR Clear_Shift_Register
     STA $C000
     LSR A
     STA $C000
@@ -192,12 +205,12 @@ Inc_RLE_Src_Addr:
     LSR A
     STA $C000
     RTS
-  Load_Tile_Buffer_And_Reset_Outer:
-    JSR Load_Tile_Buffer
-    JMP Set_Outer_Bank_0
+;  Load_Tile_Buffer_And_Reset_Outer:
+;    JSR Load_Tile_Buffer
+;    JMP Set_Outer_Bank_0
   Get_Tables_Bank_Num:
     LDA Room_Layout_Metadata+14
-    JMP Check_If_New_Bank
+    JMP Set_Outer_And_Check_Bank
   Store_Bank_And_Switch_Outer:
     STA Bank_Num
     JMP Set_Outer_Bank_0
@@ -218,6 +231,16 @@ Inc_RLE_Src_Addr:
     TAX
     PLA
     RTI
+  Reset_Outer_Get_Bank:
+    JSR Set_Outer_Bank_0
+    JMP Get_Bank_Num
+;  Clear_Shift_Register:
+;    LDX #$80
+;    STX $C000
+;    RTS
+;  Safe_Bank_Switch:
+;    JSR Clear_Shift_Register
+;    JMP Bank_Switch
 
 .PATCH 0F:FFD0
   LDA #$FF
