@@ -1,5 +1,4 @@
 src/*.ips
-!src/relocated.ips
 !src/patches/*.ips
 !src/puzzle/puzzle_base.ips
 *.nes
