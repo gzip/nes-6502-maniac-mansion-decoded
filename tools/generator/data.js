@@ -532,9 +532,9 @@ function getDecompressedData (romData)
     // parse the whole table and supplement common info
     var tableAddr = 0x3DC05;
     var titleTableAddr = 0x2447;
-    var table = getTableData(romData, tableAddr, 408).
+    var table = getTableData(romData, tableAddr, 408);//.
         // hack on title section tiles
-        concat(getTableData(romData, titleTableAddr, 8));
+        //concat(getTableData(romData, titleTableAddr, 8));
 
     var padTiles = true;
     var delimiterTile = "00 42 00 18 18 00 42 00 00 00 24 18 18 24 00 00".split(" ");
@@ -554,7 +554,8 @@ function getDecompressedData (romData)
     var bankBytes = 0;
 
     // parse graphics section + sprites section + title section
-    table.slice(0,40).concat(table.slice(100)).forEach(function (entry, i, entries)
+//    table.slice(0,40).concat(table.slice(100)).forEach(function (entry, i, entries)
+    table.slice(0,40).forEach(function (entry, i, entries)
     {
         var num;
         var numOffset = 0;
@@ -671,7 +672,8 @@ function getDecompressedData (romData)
     clearPatch.push("\n\n ; clear out nametable and attribute table data");
 
     // parse nametable and attribute table section, including title sections
-    table.slice(40, 95).concat(table.slice(102,104)).forEach(function (entry, i)
+    //table.slice(40, 95).concat(table.slice(102,104)).forEach(function (entry, i)
+    table.slice(40, 95).forEach(function (entry, i)
     {
         var isRoom = i < 0x37;
         if (entry.mem !== 0)
