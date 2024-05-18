@@ -48,15 +48,29 @@ CD ..
 
 COPY /Y %MM_ROM% %TMP_ROM%
 
-%DD% if=%TMP_ROM% of=%BASE_ROM%
-%DD% if=%TMP_ROM% bs=16 skip=1 of=%BASE_ROM% seek=16385
+WHERE /Q grep
+IF ERRORLEVEL 1 (
+  SET DD_FILTER=
+) ELSE (
+  SET DD_FILTER=2^>^&1 ^| grep -v records
+)
+
+ECHO Creating base rom...
+%DD% if=%TMP_ROM% of=%BASE_ROM% %DD_FILTER%
+%DD% if=%TMP_ROM% bs=16 skip=1 of=%BASE_ROM% seek=16385 %DD_FILTER%
 
 ECHO Patching...
 %FLIPS% src\clear_banks.ips %BASE_ROM%
 %FLIPS% src\header.ips %TMP_ROM%
 %FLIPS% src\relocated.ips %TMP_ROM%
 
-%DD% if=%TMP_ROM% of=%OUT_ROM%
-%DD% if=%TMP_ROM% bs=16 skip=1 of=%OUT_ROM% seek=16385
+ECHO Creating final rom...
+%DD% if=%TMP_ROM% of=%OUT_ROM% %DD_FILTER%
+%DD% if=%TMP_ROM% bs=16 skip=1 of=%OUT_ROM% seek=16385 %DD_FILTER%
 
+ECHO Creating final patch (%PATCH_NAME%)...
 %FLIPS% -c %BASE_ROM% %OUT_ROM% %PATCH_NAME%
+
+IF "%1" == "apply" (
+  %FLIPS% -a %PATCH_NAME% "..\scumm-nes\relocated-nt-attr.nes" ..\scumm-nes\relocated-nt-attr-patched.nes
+)
