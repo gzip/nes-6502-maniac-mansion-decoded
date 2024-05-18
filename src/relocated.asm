@@ -52,15 +52,30 @@ Set_MMC1_Control        = $FFB8
   NOP
   NOP
 
-.PATCH 0F:D851                ; about to setup nmi
+.PATCH 0F:D851               ; about to setup nmi
   JSR Store_Bank_And_Switch_Outer
+
+.PATCH 0F:DF95
+  JSR Safe_Bank_Switch       ; in Switch_to_New_Bank
+
+.PATCH 0F:DF9F
+  JSR Safe_Bank_Switch       ; in Switch_to_New_Bank
 
 .PATCH 0F:E367               ; in nmi
   JMP Reset_Outer_For_Nmi
   Return_To_Nmi:
 
+;.PATCH 0F:E389
+;  JSR Safe_Bank_Switch       ; in nmi
+
+;.PATCH 0F:E392
+;  JSR Safe_Bank_Switch       ; in nmi
+
 ;.PATCH 0F:E3EF
-;  JSR Safe_Bank_Switch
+;  JSR Safe_Bank_Switch       ; in nmi
+
+;.PATCH 0F:E3F8
+;  JSR Safe_Bank_Switch       ; in nmi
 
 .PATCH 0F:E40C               ; in nmi
   JMP Restore_Outer_After_Nmi; was PHA TAX PHA
@@ -194,7 +209,7 @@ Inc_RLE_Src_Addr:
     LDA #$10
     JMP Set_Outer_Bank
   Set_CHR_Bank_1:
-;    JSR Clear_Shift_Register
+    JSR Clear_Bank_Shift_Register
     STA $C000
     LSR A
     STA $C000
@@ -234,13 +249,15 @@ Inc_RLE_Src_Addr:
   Reset_Outer_Get_Bank:
     JSR Set_Outer_Bank_0
     JMP Get_Bank_Num
-;  Clear_Shift_Register:
-;    LDX #$80
-;    STX $C000
-;    RTS
-;  Safe_Bank_Switch:
-;    JSR Clear_Shift_Register
-;    JMP Bank_Switch
+  Clear_Bank_Shift_Register:
+    PHA
+    LDA #$80
+    STA $C000
+    PLA
+    RTS
+  Safe_Bank_Switch:
+    JSR Clear_Bank_Shift_Register
+    JMP Bank_Switch
 
 .PATCH 0F:FFD0
   LDA #$FF
