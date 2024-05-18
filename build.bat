@@ -42,7 +42,7 @@ IF "%1" == "patches" (
 ECHO Building patches...
 CD src
 %SNARFBLASM% header.asm
-%SNARFBLASM% relocated.asm
+%SNARFBLASM% relocated.asm -DBG
 %SNARFBLASM% clear_banks.asm
 CD ..
 
