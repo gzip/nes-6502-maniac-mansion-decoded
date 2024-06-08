@@ -3,26 +3,32 @@ Lookup table
 24 pairs of offsets (sproffs) and lengths (sprlens) into the data (sprdata)
 Each pair points to the set of frames for the actor (standing, walking, talking, etc. in each direction)
 
-The groups are as follows:
-* Walking
-* Standing
-* ??? [same as standing]
-* ??? [mouth open]
-* ??? [same as standing]
-* Talking
+The framesets for the main characters are as follows:
 
-Each group contains 4 framesets, one for each direction:
-* Facing left
-* Facing right (flipped)
-* Facing forward
-* Facing backward
+1 frame  for stand front (facing screen)
+1 frame  for stand right/left
+4 frames for walk front
+4 frames for walk back (facing away)
+1 frame  for stand back
+4 frames for walk right/left
+1 frame  for talk right/left
+1 frame  for talk front
 
-* DD95 (sprdesc) (descriptor)
-* DD7D (sprlens) (sprite counts)
-* DD9D (sproffs) (sprite data offsets)
+RAM locations:
+
+* DADD lookup table
 * DD75 (sprdata) (sprite data)
+* DD7D (sprlens) (sprite counts)
+* DD95 (sprdesc) (descriptor)
+* DD9D (sproffs) (sprite data offsets)
+* DDA5 Costume Bank
+* DDBE Costume Addr Hi
+* DDD7 Costume Addr Lo
 
-The engine uses the following lookup table at 3DAED-3DB05 to translate the costume resource number
+Note that all ROM addresses provided are headered.
+
+
+Resource DADD at 3DAED-3DB05 contains a lookup table to translate the costume resource number (index)
 into an offset into table DD95 (sprdesc):
 
 00 03 01 06 08
@@ -31,12 +37,53 @@ into an offset into table DD95 (sprdesc):
 0D 11 0F 0E 10
 17 00 01 05 16
 
-The 24 16-bit offsets in resource DD95 (sprdesc) at FFC7-FFF7 reference an index in DD7D (sprlens) and in DD9D (sproffs) (when multiplied by 2). The two values together describe the data for a single frame in resource DD75 (sprdata).
+Costume indices for first set:
+
+Unused = 00
+Syd = 01
+Razor = 02
+Dave = 03
+Michael = 04
+Bernard = 05
+Wendy = 06
+Jeff = 07
+Radioactive Suit = 08
+Fred Edison = 09
+Nurse Edna = 0A
+Weird Ed = 0B
+Cousin Ted = 0C
+Purple Tentacle = 0D
+Green Tentacle = 0E
+Meteor Police = 0F
+Meteor = 10
+Mark Eteer = 11
+Wink Smiley = 12
+Man Eating Plant = 13
+Bubble = 14
+Wendy = 15
+Razor = 16
+Sandy = 17
+Suit w/ Meteor = 18
+
+Costume indices for Set 2:
+
+Flying Edsel = 00
+Meteor Intro = 01
+Cursor Arrow = 02
+Sprite0 = 03
+
+
+Resource DD95 (sprdesc) at FFC7-FFF7 contains 24 16-bit offsets indexed to DD7D (sprlens) and DD9D (sproffs) (when multiplied by 2). The two values together describe the data length and offset for a single frame in resource DD75 (sprdata).
 
 0000 0011 0022 0033 0044 0055 0066 0077
 0088 0099 00AA 00BB 00BD 00CC 00DD 00E1
 00F2 00F8 00FC 00FD 00FE 0100 0104 0113
 15 (The last byte is apparently unused)
+
+Set 2 at BFF1-BFFA:
+0000 0002 0004 0005
+06
+
 
 Resource DD7D (sprlens) at FEB2-FFC6 contains tile counts for each frame in resource DD75 (sprdata) (indexed by the offsets in DD9D (sproffs)). They indicate the number of tiles within each frame (add 1 to get the actual count).
 
@@ -64,6 +111,14 @@ Resource DD7D (sprlens) at FEB2-FFC6 contains tile counts for each frame in reso
 0100: 03 03 03 03
 0104: 11 11 11 11 11 11 0D 0D 0D 0D 0D 11 11 11 11
 0113: 00 00
+
+Set 2 at 8005-800A:
+
+0000: 12 12
+0002: 02 02
+0004: 00
+0005: 00
+
 
 Resource DD9D (sproffs) at 2BDD4-2BFFE is a list of 16-bit pointers into resource DD75 (sprdata).
 Each pointer indicates where each set of frame data begins. The total data for each frame = 3 * sprlen.
@@ -93,171 +148,37 @@ Each pointer indicates where each set of frame data begins. The total data for e
 0104: 28EC 2922 2958 298E 29C4 29FA 2A30 2A5A 2A84 2AAE 2AD8 2B02 2B38 2B6E 2BA4
 0113: 2BDA 2BDD
 
-Resource DD75 (sprdata) is packed NES sprite data, 3 bytes per sprite:
+Set 2 at BFFB-C009:
 
-fYYYYYYY,tttttttt,XXXXXXpp
-f = horizontal flip
-YYYYYYY = Y-coordinate
-tttttttt = tile id
-XXXXXX = X-coordinate
-pp = palette index
+0000: 0000 0039
+0002: 0072 007B
+0004: 0084
+0005: 0087
 
-X and Y coordinates are signed, relative to the location of the actor
-(too much data to list here)
 
-There are 2 separate sets of costume graphics resources. They are selected using a specific opcode.
+Resource DD75 (sprdata) starting at 2CE21 (set 1) and 7F7B-7FB9 (set 2) is packed NES sprite data, 3 bytes per sprite:
 
-Costume index for first set:
+fYYYYYYY, tttttttt, XXXXXXpp
 
-Syd = 01
-Razor = 02
-Dave = 03
-Michael = 04
-Bernard = 05
-Wendy = 06
-Jeff = 07
-Radioactive Suit = 08
-Fred Edison = 09
-Nurse Edna = 0A
-Weird Ed = 0B
-Cousin Ted = 0C
-Purple Tentacle = 0D
-Green Tentacle = 0E
-Meteor police = 0F
-Meteor = 10
-Mark Eteer = 11
-Wink Smiley = 12
+  f = horizontal flip
+  YYYYYYY = Y-coordinate
+  tttttttt = tile id
+  XXXXXX = X-coordinate
+  pp = palette index
 
-;costume 0/1/2/3/4/5/6/7/9/10/11/15/17/23
-30/04 30/04 34/04 38/04 3C/01 3C/01 3D/01 3E/01
-3F/01 3F/01 40/01 41/01 42/01 42/01 43/01 44/01
-45/01 45/01 46/01 47/01 48/06 48/06 4E/06 54/01
-30 * 0B 0C 0D 0E
-34 * 02 03 04 05
-38 * 06 07 08 09
-3C * 01
-3D * 00
-3E * 0A
-3F * 01
-40 * 00
-41 * 0A
-42 * 01
-43 * 00
-44 * 0A
-45 * 01
-46 * 00
-47 * 0A
-48 * 0F 01 01 0F 0F 01
-4E * 10 00 00 10 10 00
-54 * 0A
+Too much data to list for the first set.
 
-;costume 8/24
-30/04 30/04 34/04 38/04 3C/01 3C/01 3D/01 3E/01
-3F/01 3F/01 40/01 41/01 42/01 42/01 43/01 44/01
-45/01 45/01 46/01 47/01 48/01 48/01 49/01 4A/01
-30 * 0B 0C 0D 0E
-34 * 02 03 04 05
-38 * 06 07 08 09
-3C * 01
-3D * 00
-3E * 0A
-3F * 01
-40 * 00
-41 * 0A
-42 * 01
-43 * 00
-44 * 0A
-45 * 01
-46 * 00
-47 * 0A
-48 * 01
-49 * 00
-4A * 0A
+The X and Y coordinates are signed, relative to the location of the actor.
+The 2 separate sets of costume graphics resources are selected using a specific opcode.
 
-;costume 12
-30/01 30/01 30/01 30/01 31/01 31/01 31/01 31/01
-32/01 32/01 32/01 32/01 33/01 33/01 33/01 33/01
-34/01 34/01 34/01 34/01 35/01 35/01 35/01 35/01
-30 * 00
-31 * 00
-32 * 00
-33 * 00
-34 * 00
-35 * 00
+Set 2 at 7F7B-8004:
 
-;costume 13/14/21/22
-30/02 30/02 30/02 30/02 32/01 32/01 32/01 32/01
-33/03 33/03 33/03 33/03 36/01 36/01 36/01 36/01
-37/01 37/01 37/01 37/01 38/02 38/02 38/02 38/02
-30 * 00 01
-32 * 00
-33 * 00 00 00
-36 * 00
-37 * 00
-38 * 00 01
+0000: 43 00 28  43 01 48  63 02 0C  5B 03 04  5B 04 24  63 05 28  4B 06 28  4B 07 48  63 08 48  5B 09 44
+      6B 0A 28  53 0B 0C  53 0C 28  53 0D 48  6B 0E 48  6D 0F 14  72 10 20  73 11 40  7B 12 21
+0039: 43 00 28  43 01 4A  63 02 0C  5B 03 04  5B 04 24  63 05 28  4B 06 28  4B 07 4A  63 08 4A  5B 09 44
+      6B 0A 28  53 0B 0C  53 0C 28  53 0D 48  6B 0E 4A  6D 0F 14  72 10 22  73 11 42  7B 13 21
+0072: 72 14 F1  78 15 E0  6C 16 09
+007B: 72 17 F1  78 15 E0  69 16 15
+0084: 00 FE 03
+0087: 00 FF 03
 
-;costume 16
-30/06 30/06 30/06 30/06 36/01 36/01 36/01 36/01
-37/01 37/01 37/01 37/01 38/01 38/01 38/01 38/01
-39/01 39/01 39/01 39/01 3A/01 3A/01 3A/01 3A/01
-30 * 00 00 01 01 02 02
-36 * 03
-37 * 03
-38 * 03
-39 * 03
-3A * 03
-
-;costume 18
-30/01 30/01 31/01 32/01 33/01 33/01 34/01 35/01
-36/01 36/01 37/01 38/01 39/01 39/01 3A/01 3B/01
-3C/01 3C/01 3D/01 3E/01 3F/02 3F/02 41/02 43/02
-30 * 01
-31 * 00
-32 * 00
-33 * 01
-34 * 00
-35 * 00
-36 * 01
-37 * 00
-38 * 00
-39 * 02
-3A * 03
-3B * 03
-3C * 01
-3D * 00
-3E * 00
-3F * 02 01
-41 * 03 00
-43 * 03 00
-
-;costume 19
-30/01 30/01 31/01 32/01 33/01 33/01 34/01 35/01
-36/01 36/01 37/01 38/01 39/01 39/01 3A/01 3B/01
-3C/01 3C/01 3D/01 3E/01 3F/01 3F/01 3F/01 3F/01
-30 * 04
-31 * 02
-32 * 01
-33 * 05
-34 * 03
-35 * 00
-36 * 05
-37 * 03
-38 * 00
-39 * 04
-3A * 02
-3B * 01
-3C * 05
-3D * 03
-3E * 00
-3F * 03
-
-;costume 20
-30/02 30/02 30/02 30/02 32/02 32/02 32/02 32/02
-34/02 34/02 34/02 34/02 36/02 36/02 36/02 36/02
-38/02 38/02 38/02 38/02 3A/02 3A/02 3A/02 3A/02
-30 * 00 01
-32 * 00 01
-34 * 00 01
-36 * 00 01
-38 * 00 01
-3A * 00 01
