@@ -81,6 +81,14 @@ var roomNames = [
     "Crash"
 ];
 
+var prepositions = [
+    "",
+    "in",
+    "with",
+    "on",
+    "to"
+];
+
 function toHex (dec, pad)
 {
     var hex = dec.toString(16).toUpperCase();
@@ -444,6 +452,13 @@ function getRoomsData (romData)
             var id = getPointer(objData, 0x04);
             var nameStart = objData[0x0E];
             var name = getDataString(objData, nameStart);
+            var width = objData[0x09];
+            var height = objData[0x0D] >> 3;
+            var x = objData[0x07];
+            var y = getDataRange(objData, 0x08, 1, 0b00011111);
+            var prep = getDataRange(objData, 0x0C, 1, 0b11100000, 5);
+            var parentState = getDataRange(objData, 0x08, 1, 0b11100000, 5);
+            var parent = objData[0x0A];
 
             var verbData = getZeroTerminatedData(objData, 0x0F);
             var codeStart = verbData.length ? nameStart + name.length + 1 : 0;
@@ -468,6 +483,11 @@ function getRoomsData (romData)
                 id: (id < 255 ? "00" : "") + toHex(id),
                 name: name,
                 name_clean: name.toLowerCase().replace(/ /g, "_").replace("'", ""),
+                width: width,
+                height: height,
+                x: x,
+                y: y,
+                preposition: prepositions[prep],
                 verbs: verbPairs,
                 state: {
                     initial: toHex(objStates[id]),
@@ -478,6 +498,8 @@ function getRoomsData (romData)
                     offset: toHex(objGfxStateChanges[o]),
                     rom: toHex(room.rom + objGfxStateChanges[o])
                 },
+                parentState: parentState,
+                parent: toHex(parent),
                 scripts: {
                     offset: toHex(codeStart),
                     rom: toHex(rom + codeStart),

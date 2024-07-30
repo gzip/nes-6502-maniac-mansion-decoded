@@ -204,8 +204,9 @@ function dumpRoomData ()
     var out = [];
     var objs = [];
 
-    rooms.forEach(function eachRoom (room)
+    rooms.forEach(function eachRoom (room, r)
     {
+        if (r === 0) return;
         out.push("-------------------------------------");
         out.push([
             "ROOM: '" + room.name + "'",
@@ -219,14 +220,19 @@ function dumpRoomData ()
             "scripts: " + JSON.stringify(room.scripts),
             "unknown: " + room.unknown.map(toHex).join(" ")
         ].join(", "));
+        out.push("-------------------------------------");
 
         room.objs.forEach(function eachRoomObj (obj)
         {
             out.push(
                 (obj.id.length < 4 ? "00" : "") + obj.id + ": '" + obj.name + "' object: " + obj.offset + "/" + obj.rom +
-                 ", state: " + obj.state.initial + "/" + obj.state.ram + "/" + obj.state.rom +
-                 ", state_change: " + obj.stateChange.offset + "/" + obj.stateChange.rom +
-                 ", verbs: " + JSON.stringify(obj.verbs)
+                ", width: " + obj.width + ", height: " + obj.height + ", x: " + obj.x + ", y: " + obj.y +
+                (obj.preposition ? ", preposition: " + obj.preposition : "") +
+                ", state: " + obj.state.initial + "/" + obj.state.ram + "/" + obj.state.rom +
+                ", state_change: " + obj.stateChange.offset + "/" + obj.stateChange.rom +
+                (obj.parentState != 0 ? ", parent_state: " + obj.parentState : "") +
+                (obj.parent != 0 ? ", parent: " + obj.parent + "/" + room.objs[toDec(obj.parent) - 1].id : "") +
+                ", verbs: " + JSON.stringify(obj.verbs)
             );
             out.push("      " + obj.scripts.data);
             //out.push((obj.id.length < 4 ? "00" : "") + obj.id + "\t" + obj.name + "\t" + obj.code);
