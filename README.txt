@@ -15,13 +15,26 @@ The hack also includes the Maniac Mansion Mouse Hack and fixes a few glitches in
 
 - The glitched graphics in the room under the house are fixed
 - The glitched coin box graphics in the arcade are fixed
+- The glitched graphics for the developer under the house are fixed
 - The leftover pennant object in Weird Ed's room is removed
 - The leftover keypad object in the hallway is removed
+- The interactivity for the radioactive slime in the basement is restored
 - The fence mask is fixed in the starting screen so that the player is completely behind it
 - The colors for the right-side gargoyle on the stairs are corrected
 - The border color is fixed when selecting Michael on the character select screen
-- The glitched graphics for the developer under the house are fixed
-- The interactivity for the radioactive slime in the basement is restored
+- The meteor's sprite graphics are fixed
+- The Lucasfilm logo is centered vertically and the misplaced shine sprite is fixed
+
+The following optional patches are applied by default:
+
+- char_select.ips - Adds rounded corners to the character select screen.
+- fridge.ips - Rearranges the fridge to recolor the lettuce green and the batteries brown.
+- portraits.ips - Improves the various portraits in the house, including Fred in Edna's room, Edna in Fred's room, Fred in Edna's attic, and the family portrait in the den.
+- title_screen.ips - Uses the title screen from the Japanese version, which is based on the C64 graphics. (Not included in default patches, must be applied separately.)
+- under_house_enhanced.ips - Improves the post and valve graphics and fixes the background mask.
+
+You can select the base patch to omit these additions.
+
 
 Patching
 
