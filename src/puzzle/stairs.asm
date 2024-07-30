@@ -56,6 +56,24 @@ endif_is_boards:
 end_object_rotted_stairs:
 
 
+; entrance script
+.PATCH 05:A540
+; existing entrance script
+.data $42, $37               ; startScript(55);
+.data $68, $01, $1F          ; VAR_RESULT = isScriptRunning(31)
+.data $A8, $01, $02, $00     ; if (VAR_RESULT)
+.data $42, $1F               ; startScript(31)
+.data $68, $01, $20          ; VAR_RESULT = isScriptRunning(32)
+.data $A8, $01, $02, $00     ; if (VAR_RESULT)
+.data $42, $20               ; startScript(32)
+; new addition to entrance script
+.data IF_STATE_08, OBJ_FIXED_STAIRS_ID, (endif_stairs_fixed - if_stairs_fixed)
+if_stairs_fixed:
+  .data SET_BOX_FLAGS, $01, $00
+endif_stairs_fixed:
+.data END_SCRIPT
+
+
 .PATCH 05:A570 ; 16580
 ; object Fixed Stairs
 object_fixed_stairs:
@@ -164,6 +182,11 @@ fix_stairs_script:
 .data END_CUTSCENE
 .data END_SCRIPT
 end_fix_stairs_script:
+
+
+; blank out old entrance script
+.PATCH 05:AA81
+.dsb $15, $FF
 
 
 ; patch data for script 6 which was unused
